@@ -1,0 +1,59 @@
+{
+  "shortDelaySeconds": 5,
+  "longDelaySeconds": 15,
+  "defaultStartupType": null,
+  "plugins": {
+    "obsidian-advanced-slides": {
+      "startupType": "disabled"
+    },
+    "obsidian-banners": {
+      "startupType": "long"
+    },
+    "obsidian42-brat": {
+      "startupType": "long"
+    },
+    "calendar": {
+      "startupType": "short"
+    },
+    "various-complements": {
+      "startupType": "short"
+    },
+    "obsidian-tasks-plugin": {
+      "startupType": "short"
+    },
+    "quick-latex": {
+      "startupType": "short"
+    },
+    "obsidian-mind-map": {
+      "startupType": "short"
+    },
+    "execute-code": {
+      "startupType": "short"
+    },
+    "obsidian-excalidraw-plugin": {
+      "startupType": "short"
+    },
+    "dataview": {
+      "startupType": "short"
+    },
+    "obsidian-hider": {
+      "startupType": "short"
+    },
+    "darlal-switcher-plus": {
+      "startupType": "instant"
+    },
+    "obsidian-snippet-downloader": {
+      "startupType": "short"
+    },
+    "obsidian-style-settings": {
+      "startupType": "short"
+    },
+    "homepage": {
+      "startupType": "instant"
+    },
+    "obsidian-plugin-groups": {
+      "startupType": "disabled"
+    }
+  },
+  "showConsoleLog": false
+}
