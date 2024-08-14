@@ -1,7 +1,12 @@
 {
-  "cssTheme": "Obsidian Nord",
+  "cssTheme": "ITS Theme",
   "interfaceFontFamily": "Agave Nerd Font",
   "textFontFamily": "Agave Nerd Font",
   "monospaceFontFamily": "Agave Nerd Font",
-  "showViewHeader": false
+  "showViewHeader": false,
+  "enabledCssSnippets": [
+    "MCL Gallery Cards",
+    "MCL Multi Column",
+    "MCL Wide Views"
+  ]
 }

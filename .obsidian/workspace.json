@@ -4,22 +4,71 @@
     "type": "split",
     "children": [
       {
-        "id": "61986c6bfd370be2",
+        "id": "5b44395b81b518d3",
         "type": "tabs",
         "children": [
           {
-            "id": "4c23efbb1b89a4b4",
+            "id": "dd1553d54a10c45f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academics/Projects/Final Year Project/Final Year Project.md",
+                "file": "Projects/Pocket Shop Solar/Pocket Shop Solar.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "53a733549c011862",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academics/S7/Seminar/Seminar.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "d3a25068e8b79d8b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academics/S7/Seminar/Seminar Topic 1.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "eee71ea16323ca18",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Academics/S7/Seminar/Seminar Topic 2.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5e2be4303f3d69be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -85,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Academics/Projects/Final Year Project/Final Year Project.md",
+                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Academics/Projects/Final Year Project/Final Year Project.md",
+                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Academics/Projects/Final Year Project/Final Year Project.md"
+                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md"
               }
             }
           },
@@ -146,21 +195,57 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "4c23efbb1b89a4b4",
+  "active": "264e510e25645550",
   "lastOpenFiles": [
-    "Academics/Projects/Final Year Project/Final Year Project.md",
-    "Academics/Projects/Final Year Project",
-    "Academics/Projects",
-    "Academics"
+    "Private_Notes/Project_X/Security/Unlock Using SmartPhone.md",
+    "Private_Notes/Others_Projects/Atlin/Drawing 2024-08-08 22.55.09.excalidraw.png",
+    "Private_Notes/Others_Projects/Atlin/Drawing 2024-08-08 22.55.09.excalidraw.md",
+    "Private_Notes/Project_X/Todo_App/Todo App.md",
+    "Private_Notes/Project_X/Todo_App/Firebase.md",
+    "Private_Notes/Project_X/Todo_App/Drawing 2024-06-12 22.21.52.excalidraw.md",
+    "Private_Notes/Project_X/Studio/Stand.md",
+    "Private_Notes/Project_X/Security/NFC Lock.md",
+    "Private_Notes/Project_X/Electronics R&D/Log.md",
+    "Private_Notes/Scripts/mount_MDATA.sh",
+    "Private_Notes/Server/Nokia Siemens Network.md",
+    "Private_Notes/Others_Projects/Atlin",
+    "Private_Notes/Project_X/Todo_App",
+    "Private_Notes/Project_X/Studio",
+    "Private_Notes/Daily Notes/30-07-2024.md",
+    "Private_Notes/Daily Notes/03-08-2024.md",
+    "Private_Notes/Project_X/Security",
+    "Private_Notes/Project_X/Log.md",
+    "Private_Notes/Project_X/Electronics R&D",
+    "Private_Notes/Excalidraw/Drawing 2024-06-12 22.42.47.excalidraw.md",
+    "Private_Notes/Daily Notes/05-08-2024.md",
+    "Private_Notes/Daily Notes/Daily Notes.md",
+    "Private_Notes/Daily Notes/31-07-2024.md",
+    "Private_Notes/Daily Notes/16-06-2024.md",
+    "Private_Notes/Daily Notes/04-08-2024.md",
+    "Private_Notes/Daily Notes/01-06-2024.md",
+    "Private_Notes/Activity/Sleep.md",
+    "Private_Notes/father.md",
+    "Private_Notes/Unfinished Videos.md",
+    "Private_Notes/Todo.md",
+    "Private_Notes/Time Table.md",
+    "Private_Notes/Task.md",
+    "Private_Notes/Server",
+    "Private_Notes/Scripts",
+    "Private_Notes/README.md_",
+    "Private_Notes/README.md",
+    "Private_Notes/Project_X",
+    "Private_Notes/Pasted image 20240613033506.png"
   ]
 }
