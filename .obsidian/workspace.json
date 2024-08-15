@@ -4,71 +4,57 @@
     "type": "split",
     "children": [
       {
-        "id": "5b44395b81b518d3",
+        "id": "dfa1ed7ede7a3717",
         "type": "tabs",
         "children": [
           {
-            "id": "dd1553d54a10c45f",
+            "id": "e9863c60a2505e78",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Academics/Projects/Final Year Project/Topic 2/Drawing 2024-08-15 17.38.43.excalidraw.md"
+              }
+            }
+          },
+          {
+            "id": "ba8fe0171156332f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Projects/Pocket Shop Solar/Pocket Shop Solar.md",
+                "file": "Electronics/Antenas/Antennas.md",
                 "mode": "preview",
                 "source": false
               }
             }
           },
           {
-            "id": "53a733549c011862",
+            "id": "484366cef8adc754",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academics/S7/Seminar/Seminar.md",
+                "file": "Electronics/Antenas/Building an Antenna.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "d3a25068e8b79d8b",
+            "id": "c14617ca8dfdd133",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Academics/S7/Seminar/Seminar Topic 1.md",
+                "file": "Academics/Projects/Final Year Project/Topic 2.md",
                 "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "eee71ea16323ca18",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Academics/S7/Seminar/Seminar Topic 2.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5e2be4303f3d69be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
-                "mode": "preview",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -97,7 +83,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "=1",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -118,7 +104,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "d27130542ec6e095",
@@ -134,7 +121,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
+                "file": "Electronics/Antenas/Building an Antenna.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +138,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md",
+                "file": "Electronics/Antenas/Building an Antenna.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +161,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Electronics/Embedded Systems/Micro Controllers/Arduino/Arduino.md"
+                "file": "Electronics/Antenas/Building an Antenna.md"
               }
             }
           },
@@ -207,45 +194,63 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "264e510e25645550",
+  "active": "484366cef8adc754",
   "lastOpenFiles": [
-    "Private_Notes/Project_X/Security/Unlock Using SmartPhone.md",
-    "Private_Notes/Others_Projects/Atlin/Drawing 2024-08-08 22.55.09.excalidraw.png",
+    "Electronics/Antenas/Antennas.md",
+    "Electronics/Antenas/Building an Antenna.md",
+    "Academics/Projects/Final Year Project/Topic 2/Drawing 2024-08-15 17.38.43.excalidraw.md",
+    "Academics/Projects/Final Year Project/Topic 2.md",
+    "Academics/Projects/Final Year Project/Final Year Project.md",
+    "Academics/Projects/Final Year Project/Topic 1/attachments/Drawing 2024-08-12 23.32.39.excalidraw.md",
+    "Academics/Projects/Final Year Project/Topic 2",
+    "Academics/Projects/Final Year Project/Topic 1.md",
+    "Academics/Projects/Final Year Project/Open Speech Signal Processing Platform Workshop.md",
+    "Academics/Projects/Final Year Project/Novel Framework for Translation Algorithms in Multimedia Authoring Tools.md",
+    "Tympan.md",
+    "Electronics/Antenas",
+    "Electronics/Signal Processing/Sampling/instantaneous sampling.excalidraw.md",
+    "Old_NOTES/Linux/Networking/IP Forwarding.md",
+    "Academics/S5/Control Systems/Manson's Gain Formula.md",
+    "Academics/S6/Embedded Systems/ARM Programms.md",
+    "Academics/S6/Embedded Systems",
+    "Electronics/Embedded Systems/ARM/Untitled.md",
+    "Electronics/Embedded Systems/ARM",
+    "Electronics/Embedded Systems/Shared Data problem.md",
+    "Academics/S5/Control Systems",
+    "Academics/S5",
+    "Electronics/Embedded Systems/Interrupts.md",
+    "Academics/S6/MFE/PEQ/PEQ MFE 1.md",
+    "Electronics/Signal Processing/Smapling.md",
+    "Academics/S6/MFE/PEQ",
+    "Academics/S6/MFE",
+    "Academics/S6",
+    "Electronics/Signal Processing/Sampling",
+    "Electronics/Signal Processing/Nyquist Sampling Theorem.md",
     "Private_Notes/Others_Projects/Atlin/Drawing 2024-08-08 22.55.09.excalidraw.md",
-    "Private_Notes/Project_X/Todo_App/Todo App.md",
-    "Private_Notes/Project_X/Todo_App/Firebase.md",
-    "Private_Notes/Project_X/Todo_App/Drawing 2024-06-12 22.21.52.excalidraw.md",
-    "Private_Notes/Project_X/Studio/Stand.md",
-    "Private_Notes/Project_X/Security/NFC Lock.md",
-    "Private_Notes/Project_X/Electronics R&D/Log.md",
-    "Private_Notes/Scripts/mount_MDATA.sh",
-    "Private_Notes/Server/Nokia Siemens Network.md",
-    "Private_Notes/Others_Projects/Atlin",
-    "Private_Notes/Project_X/Todo_App",
-    "Private_Notes/Project_X/Studio",
-    "Private_Notes/Daily Notes/30-07-2024.md",
-    "Private_Notes/Daily Notes/03-08-2024.md",
-    "Private_Notes/Project_X/Security",
-    "Private_Notes/Project_X/Log.md",
-    "Private_Notes/Project_X/Electronics R&D",
-    "Private_Notes/Excalidraw/Drawing 2024-06-12 22.42.47.excalidraw.md",
-    "Private_Notes/Daily Notes/05-08-2024.md",
-    "Private_Notes/Daily Notes/Daily Notes.md",
-    "Private_Notes/Daily Notes/31-07-2024.md",
-    "Private_Notes/Daily Notes/16-06-2024.md",
-    "Private_Notes/Daily Notes/04-08-2024.md",
-    "Private_Notes/Daily Notes/01-06-2024.md",
-    "Private_Notes/Activity/Sleep.md",
-    "Private_Notes/father.md",
-    "Private_Notes/Unfinished Videos.md",
-    "Private_Notes/Todo.md",
-    "Private_Notes/Time Table.md",
-    "Private_Notes/Task.md",
-    "Private_Notes/Server",
-    "Private_Notes/Scripts",
-    "Private_Notes/README.md_",
-    "Private_Notes/README.md",
-    "Private_Notes/Project_X",
-    "Private_Notes/Pasted image 20240613033506.png"
+    "Private_Notes/Others_Projects/Atlin/Atlin Final Year Project.md",
+    "Files/Templates/note_template.md",
+    "Old_NOTES/Projects/Iot_based_smart_energy_management_system/Files/Diagrams/Pinout.canvas",
+    "Old_NOTES/Projects/Iot_based_smart_energy_management_system/Files/Images/esp32_pinout.png",
+    "Old_NOTES/Projects/Iot_based_smart_energy_management_system/ESP32/esp32.md",
+    "Old_NOTES/Academics/Btech/S3/ECT205-NT/Module 1/Files/voltage sources.excalidraw.md",
+    "Old_NOTES/Academics/Btech/S3/ECT205-NT/Module 1/Files/ideal current source.excalidraw.md",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240312003455.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240312003020.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240312002822.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240312002754.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240312000609.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240311235630.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240311235518.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240311233704.png",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Files/Images/Pasted image 20240311232409.png",
+    "Old_NOTES/Academics/Btech/S6/ElectroMagnetics/Module 1/Canvas/Untitled.canvas",
+    "Old_NOTES/Academics/Btech/Projects/Iot_based_smart_energy_management_system/Files/Diagrams/Pinouts.canvas",
+    "Old_NOTES/Academics/Btech/Projects/Iot_based_smart_energy_management_system/Files/Diagrams/Pinout.canvas",
+    "Old_NOTES/Academics/Btech/Projects/Iot_based_smart_energy_management_system/Files/Diagrams/Mini_Project.canvas",
+    "Old_NOTES/Academics/Btech/Projects/Iot_based_smart_energy_management_system/Files/Diagrams/Block Diagram.canvas",
+    "Old_NOTES/Coding/AI/Machine Learning/Neural Networks/canvases/Neural Network With 3 Weights.canvas",
+    "Old_NOTES/Academics/Btech/S6/Management For Engineers/Files/System concept of Productivity.canvas",
+    "Old_NOTES/Academics/Btech/S6/Embedded Systems/Module 2/ES Canvas 1.canvas",
+    "Old_NOTES/Academics/Btech/S6/ElectroMagnetics/Diagrams/Electromagnetics.canvas"
   ]
 }
