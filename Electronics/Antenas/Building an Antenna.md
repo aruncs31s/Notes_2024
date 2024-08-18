@@ -35,6 +35,8 @@ cssclasses:
 
 Sometimes its called massive **MIMO**
 
+- Enables multi user structure
+
 ```mermaid
 graph LR
 A[Hybrid Beam Forming Arch] --> B(Analog Beam Former)
