@@ -42,3 +42,17 @@ tags: []
 ```bash
 cdo s/something/tosomething | update
 ```
+
+## Keybindings
+
+1. Increment and Decrement an integer
+
+```
+Control + A -> Increment
+Control + X -> Decrement
+```
+
+2. To increment incrementing order
+
+- Select the lines using `Ctrl+V` or `v  + j`
+- Then type `g Ctrl + A `
