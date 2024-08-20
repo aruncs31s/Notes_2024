@@ -8,6 +8,31 @@ cssclasses:
 ---
 
 # Building an Antenna
+## Types of Antenna 
+1. [[#Microstrip Antenna]]
+	1. [[#Patch Antenna]]
+
+
+### Microstrip Antenna 
+
+#### Patch Antenna 
+>[!float|right-small] Radiation Pattern -> Patch Antenna 
+>![Patch Antenna Radiation Pattern](https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Patch_antenna_pattern.gif/330px-Patch_antenna_pattern.gif)
+
+>[!blank|left-small]
+>![[patch antenna.excalidraw]]
+
+
+
+>
+
+
+>*Patch antenna is a type of microstrip antenna with low profile which can be mounted on a surface*[^1]
+
+[^1]:https://en.wikipedia.org/wiki/Patch_antenna#:~:text=The%20patch%20antenna%20is%20mainly,it%20on%20printed%20circuit%20boards.
+
+
+
 
 > [!blank|right-medium]
 >
