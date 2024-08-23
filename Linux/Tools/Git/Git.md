@@ -16,7 +16,7 @@ cssclasses:
 - [Installation](#installation)
 - [Initial Setup](#initial%20setup)
 - [Basics](#basics)
-  - [Getting a Git repo]()
+  - [[#Pushing Changes to Github]]
   - [[#Kick Start]]
   - [Submitting that change]()
 - [[#Dropping Commits]]
@@ -99,6 +99,13 @@ git config --list
 - [[Branch]]
 
 - [Merge Conflict](#mergeconflict)
+
+#### Pushing Changes to Github
+```bash
+git add -A 
+git commit -m "added <this File>" # Change this accrdingly
+git push origin main
+```
 
 #### Kick Start
 
