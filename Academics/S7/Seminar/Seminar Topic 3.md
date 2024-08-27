@@ -2,8 +2,8 @@
 id: Seminar Topic 3
 aliases:
   - matter,iot
-tags: 
-banner: "https://www.mistywest.com/wp-content/uploads/2022/04/MistyWest_Matter_Smart-Home-KeyMedia-01-1.png"
+tags: []
+banner: https://www.mistywest.com/wp-content/uploads/2022/04/MistyWest_Matter_Smart-Home-KeyMedia-01-1.png
 banner_x: 0
 banner_y: 0.684
 cssclasses:
@@ -17,11 +17,11 @@ Matter is a freely available ==connectivity standard== for smart home and Intern
 - It aims to improve `interoperability` and compatibility between different manufacturer and security and also allow ==local control==.
 - It came to exits because of the lack of interoperability among various standards, protocols and manufacturer .
 
-#### Working 
-
+#### Working
 
 #### Advantages
-- The standard operates on **IP** and functions via one or more controllers that connect and manage devices within your local network, This  ==eliminating the need for multiple proprietary hubs==
+
+- The standard operates on **IP** and functions via one or more controllers that connect and manage devices within your local network, This ==eliminating the need for multiple proprietary hubs==
 - Matter-certified products are engineered to operate locally and ==do not depend on an internet connection for their core functions==
 
 ### Working With IoT

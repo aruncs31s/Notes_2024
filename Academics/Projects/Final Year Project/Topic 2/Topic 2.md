@@ -3,8 +3,8 @@ id: Topic 2
 aliases:
   - final year project topic
 tags:
-  - "#antenna"
-Created: 15-08-2024
+  -  #antenna
+Created: "15-08-2024"
 cssclasses:
   - wide-page
 ---
@@ -88,6 +88,9 @@ We are trying to dynamically change its parameters to maintain signal quality
    - Control Antenna parameters using MC or SBC? or SDR ?
    -
 
+### Papers
+
+1. [[Design and Analysis of Microstrip Patch Antenna for Wireless Communication]]
 #### Resources
 
 1. Cources about

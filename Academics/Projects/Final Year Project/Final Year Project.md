@@ -1,12 +1,32 @@
 ---
+id: Final Year Project
+aliases: []
+tags: []
+Created: "15-08-2024"
 cssclasses:
   - wide-page
-aliases: 
-tags: 
-Created: 15-08-2024
-Status:
 ---
-# Final Year Project 
+
+# Final Year Project
+
 1. [[Academics/Projects/Final Year Project/Topic 1/Topic 1|Topic 1]]
 2. [[Academics/Projects/Final Year Project/Topic 2/Topic 2|Topic 2 Adaptive Antenna Gain]]
-3. 
+
+---
+
+#### New Topics
+
+1. Optimal caching policy for wireless content delivery in D2D networks
+2. Enabling Efficient Deep Learning on MCU with Transient Redundancy Elimination [File Location For NVIM](/home/aruncs/Documents/Final_Year_Project/asplos23a_mcu.pdf)
+3. [Emergency Communication Network Based On Drones](https://ieeexplore.ieee.org/document/10636606)
+4. 
+##### Particle swarm optimization(PSO)
+
+> [Source](https://www.sciencedirect.com/topics/engineering/particle-swarm-optimization)
+>
+> - Based on the natural phenomenon of a bird flock or fish school.
+
+### New Keyword 
+
+- [ ] Quantum Fourier Transform(QFT) and IQFT
+- [ ]  

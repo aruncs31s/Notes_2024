@@ -11,6 +11,16 @@
       "label": "Existing or *Self Reference"
     },
     {
+      "id": "187778655e1ae114",
+      "type": "file",
+      "file": "Electronics/Antennas/Building an Antenna.md",
+      "styleAttributes": {},
+      "x": -961,
+      "y": 200,
+      "width": 400,
+      "height": 400
+    },
+    {
       "id": "bffb7a9dbd0972bf",
       "type": "text",
       "text": "### Microstrip Patch Antenna",
@@ -34,16 +44,6 @@
       "y": 840,
       "width": 328,
       "height": 100
-    },
-    {
-      "id": "187778655e1ae114",
-      "type": "file",
-      "file": "Electronics/Antennas/Building an Antenna.md",
-      "styleAttributes": {},
-      "x": -961,
-      "y": 200,
-      "width": 400,
-      "height": 400
     },
     {
       "id": "4494e719814c3dbb",

@@ -5,226 +5,422 @@ tags: []
 Created: ""
 cssclasses: []
 ---
-
 # Node to Node Communication
+**Objective** : 
+> To make all the node to communicate with the gateway(receiver)
 
-> [!float|right-small] Contents
->
-> - [[#ESP32 Programming]]
+**Methodology**:
+>- Going to use [[ESP_NOW]]
+> - There Will Be 5 Nodes 
+> - Going to use [[Electronics/Embedded Systems/Micro Controllers/ESP32/ESP32|ESP32]]
 
+**Sensors**:
+> 1. Light Intensity Sensor `VEML7700` 
+> 2. Wind Meter
+
+##### Light Sensor
+- It Uses `I2C`
+- Sample Programming [[Interfacing#Light Intensity Sensor|Light Intensity Sensor]]
+- Supply voltage range VDD: **2.5 V to 3.6 V**
+
+##### Wind Meter
+- we can use interrupt programming for this
 ### ESP32 Programming
+#### Pins Used
 
-- Going to use mesh Networking
-- Self Haling
-- self-organizing
+| Sensor           | Pin            | ESP32 GPIO |
+| ---------------- | -------------- | ---------- |
+| VEML7700         | SDA            | 21         |
+|                  | SCL            | 22         |
+| Wind Speed Meter | Intterrupt PIN | 13         |
+|                  |                |            |
 
-#### Esp32 Mesh
 
-> [!float|right-small] painlessMesh
-> I'm using `painlessMesh` which is not compatible with `3.X` version board
->
-> - Choose ESP32 Board Version `2.0.X`
-
-- Do not require a central node , the nodes are responsible for others conversation.
-- [painlessMesh](https://gitlab.com/painlessMesh/painlessMesh) Allows to create mesh network
-- Maximum size of the mesh is limited by the amount of memory in the heap that can be allocated to the sub-connections buffer
-
-#builerplate
+- Single Node 
+	- [[#Single Node Sender Side]]
+	- [[#Single Node Receiver Side]]
+- Multi Node
+##### Single Node Receiver Side
 
 ```c
-#include "painlessMesh.h"
-#define   MESH_PREFIX     "gcek_mesh"
-#define   MESH_PASSWORD   "pass@123"
-#define   MESH_PORT       8080
+#include <esp_now.h>
+#include <WiFi.h>
 
-Scheduler userScheduler; // to control your personal task
-painlessMesh  mesh;
+// Replace it with Router IP
+const char* ssid = "ssid";
+const char* password = "passwd";
 
-// User stub
-void sendMessage() ; // Prototype so PlatformIO doesn't complain
+// Structure example to receive data
+// Must match the sender structure
+typedef struct Data {
+char a[32];
+int b;
+} Data;
+Data received_data;
 
-Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
-
-void sendMessage() {
-  String msg = "Hi from node1";
-  msg += mesh.getNodeId();
-  mesh.sendBroadcast( msg );
-  taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ));
-}
-
-// Needed for painless library
-void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
-}
-
-void newConnectionCallback(uint32_t nodeId) {
-    Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
-}
-
-void changedConnectionCallback() {
-  Serial.printf("Changed connections\n");
-}
-
-void nodeTimeAdjustedCallback(int32_t offset) {
-    Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
+// callback function that will be executed when data is received
+void OnDataRecv(const uint8_t * mac, const uint8_t *incomingData, int len) {
+// Copy the value from source to destination
+memcpy(&received_data, incomingData, sizeof(received_data));
+Serial.print("Bytes received: ");
+Serial.println(len);
+Serial.print("Char: ");
+Serial.println(received_data.a);
+Serial.print("Int: ");
+Serial.println(received_data.b);
+Serial.println();
 }
 
 void setup() {
-  Serial.begin(115200);
+Serial.begin(9600);
+// Set device as a Wi-Fi Station
+WiFi.mode(WIFI_STA);
 
-//mesh.setDebugMsgTypes( ERROR | MESH_STATUS | CONNECTION | SYNC | COMMUNICATION | GENERAL | MSG_TYPES | REMOTE ); // all types on
-  mesh.setDebugMsgTypes( ERROR | STARTUP );  // set before init() so that you can see startup messages
-
-  mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT );
-  mesh.onReceive(&receivedCallback);
-  mesh.onNewConnection(&newConnectionCallback);
-  mesh.onChangedConnections(&changedConnectionCallback);
-  mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
-
-  userScheduler.addTask( taskSendMessage );
-  taskSendMessage.enable();
+// Init ESP-NOW
+if (esp_now_init() != ESP_OK) {
+Serial.println("Error initializing ESP-NOW");
+return;
 }
+// FIX: Implement Reconnection
+WiFi.begin(ssid,password);
+while (WiFi.status() != WL_CONNECTED) {
+delay(500);
+Serial.print(".");
+}
+esp_now_register_recv_cb(esp_now_recv_cb_t(OnDataRecv));
 
+}
 void loop() {
-  // it will run the user scheduler as well
-  mesh.update();
+Serial.println("IP address: ");
+Serial.println(WiFi.localIP());
+delay(1000);
 }
 ```
 
-#explanation
-
-1. `MESH_PREFIX` -> name of the network , `MESH_PASSWORD` -> password for that
-
-```c
-#include "painlessMesh.h"
-#define   MESH_PREFIX     "mesh_name"
-#define   MESH_PASSWORD   "password"
-#define   MESH_PORT       8080
-```
-
-_all nodes in the network should use the same password_
-
-2. Creating a `Scheduler` object and `mesh` object
-
-```
-Scheduler userScheduler;
-painlessMesh  mesh;
-```
-
-3.  Running Tasks Indefinitely
-
-- `TASK_SECOND * 1` -> run every second
-  - `TASK_SECOND * x` <- where `x` is the second you want that task to repeat to
-- `TASK_FOREVER` -> run $\infty$
-- `&sendMessage` -> pointer to `sendMessage()`. ? so may be need to define `sendMessage()` before use
+##### Single Node Sender Side
+You can use [[WiFi Programming#Get MAC Address|Get Mac]] to get mac address
 
 ```c
-Task taskSendMessage( TASK_SECOND * 1 , TASK_FOREVER, &sendMessage );
-```
+#include <esp_now.h>
+#include <WiFi.h>
 
-4. Custom functions
+// Receiver
+uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0xED, 0x30, 0xD8};
 
-```c
-void sendMessage() {
-  String msg = "Hi from node1";
-  msg += mesh.getNodeId();
-  mesh.sendBroadcast( msg );
-  taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ));
-}
-```
+// Structure example to send data
+// Must match the receiver structure
+typedef struct struct_message {
+  char a[32];
+  int b;
+  float c;
+  bool d;
+} struct_message;
 
-- `mesh.sendBroadcast()` -> sends to all nodes in the network
-- `taskSendMessage.setInterval( random( TASK_SECOND * 1, TASK_SECOND * 5 ))` send in a random intervell between `1 and 5`
-  To send to a specific node
+// Create a struct_message called myData
+struct_message myData;
 
-```c
-void sendMessage() {
-String msg = "Hi from node1";
-uint32_t targetNodeId = /* Target Node ID */;
-msg += mesh.getNodeId();
-mesh.sendSingle(targetNodeId, msg);
-// Send to a specific node
-taskSendMessage.setInterval(random(TASK_SECOND * 1, TASK_SECOND * 5)); }
-```
+esp_now_peer_info_t peerInfo;
 
-5. Callback Functions
-
-- Similar like `ACK`
-- `from` -> sender node id
-- `msg` -> recieved message
-
-```c
-// Needed for painless library
-void receivedCallback( uint32_t from, String &msg ) {
-  Serial.printf("startHere: Received from %u msg=%s\n", from, msg.c_str());
-}
-```
-
-- `newConnectionCallback` when a new node is joins the network
-
-```c
-void newConnectionCallback(uint32_t nodeId) {
-    Serial.printf("--> startHere: New Connection, nodeId = %u\n", nodeId);
+// callback when data is sent
+void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+  Serial.print("\r\nLast Packet Send Status:\t");
+  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
 }
 
-```
-
-- `changedConnectionCallback` -> when a connection between the nodes changes
-
-```c
-void changedConnectionCallback() {
-  Serial.printf("Changed connections\n");
-}
-
-```
-
-6. when the time synchronization between nodes is adjusted
-
-```c
-
-void nodeTimeAdjustedCallback(int32_t offset) {
-    Serial.printf("Adjusted time %u. Offset = %d\n", mesh.getNodeTime(),offset);
-}
-
-```
-
-7. Setup Section
-
-- `mesh.setDebugMsgTypes(ERROR | STARTUP)` -> debug messages
-  - Available types
-    - `ERROR` | `MESH_STATUS` | `CONNECTION` | `SYNC` | `COMMUNICATION` | `GENERAL` | `MSG_TYPES `| `REMOTE`
-    - `mesh.setDebugMsgTypes( )` -> simply using this enables all the aboves
-- `mesh.init(...)` -> initializes the mesh
-- connection feedbacks
-  - `mesh.onReceive(&receivedCallback)`
-  - `mesh.onNewConnection(&newConnectionCallback)`
-  - `mesh.onChangedConnections(&changedConnectionCallback)`
-  - `mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback)`
-  - [ ] Need to change the name of the functions
-
-```c
 void setup() {
+  // Init Serial Monitor
   Serial.begin(9600);
-  mesh.setDebugMsgTypes( ERROR | STARTUP );
-  mesh.init( MESH_PREFIX, MESH_PASSWORD, &userScheduler, MESH_PORT );
-  mesh.onReceive(&receivedCallback);
-  mesh.onNewConnection(&newConnectionCallback);
-  mesh.onChangedConnections(&changedConnectionCallback);
-  mesh.onNodeTimeAdjusted(&nodeTimeAdjustedCallback);
-  userScheduler.addTask( taskSendMessage );
-  taskSendMessage.enable();
+
+  // Set device as a Wi-Fi Station
+  WiFi.mode(WIFI_STA);
+
+  // Init ESP-NOW
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  // Once ESPNow is successfully Init, we will register for Send CB to
+  // get the status of Trasnmitted packet
+  esp_now_register_send_cb(OnDataSent);
+
+  // Register peer
+  memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+  peerInfo.channel = 0;
+  peerInfo.encrypt = false;
+
+  // Add peer
+  if (esp_now_add_peer(&peerInfo) != ESP_OK){
+    Serial.println("Failed to add peer");
+    return;
+  }
 }
 
+void loop() {
+  // Set values to send
+  strcpy(myData.a, "THIS IS A CHAR");
+  myData.b = random(1,20);
+  myData.c = 1.2;
+  myData.d = false;
+
+  // Send message via ESP-NOW
+  esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));
+
+  if (result == ESP_OK) {
+    Serial.println("Sent with success");
+  }
+  else {
+    Serial.println("Error sending the data");
+  }
+  delay(2000);
+}
 ```
 
-- `userScheduler.addTask(taskSendMessage);` adds the message-sending task to the scheduler.
-- `taskSendMessage.enable();` enables the task so that it starts running.
+#### Using Meany to One
 
-8.  continuously run the mesh network
+##### Receiver Side
 
 ```c
+#include <esp_now.h>
+#include <WiFi.h>
+
+// Structure example to receive data
+// Must match the sender structure
+typedef struct struct_message {
+  int id;
+  int x;
+  int y;
+}struct_message;
+
+// Create a struct_message called myData
+struct_message myData;
+
+// Create a structure to hold the readings from each board
+struct_message board1;
+struct_message board2;
+struct_message board3;
+
+// Create an array with all the structures
+struct_message boardsStruct[3] = {board1, board2, board3};
+
+// callback function that will be executed when data is received
+void OnDataRecv(const uint8_t * mac_addr, const uint8_t *incomingData, int len) {
+  char macStr[18];
+  Serial.print("Packet received from: ");
+  snprintf(macStr, sizeof(macStr), "%02x:%02x:%02x:%02x:%02x:%02x",
+           mac_addr[0], mac_addr[1], mac_addr[2], mac_addr[3], mac_addr[4], mac_addr[5]);
+  Serial.println(macStr);
+  memcpy(&myData, incomingData, sizeof(myData));
+  Serial.printf("Board ID %u: %u bytes\n", myData.id, len);
+  // Update the structures with the new incoming data
+  boardsStruct[myData.id-1].x = myData.x;
+  boardsStruct[myData.id-1].y = myData.y;
+  Serial.printf("x value: %d \n", boardsStruct[myData.id-1].x);
+  Serial.printf("y value: %d \n", boardsStruct[myData.id-1].y);
+  Serial.println();
+}
+
+void setup() {
+  //Initialize Serial Monitor
+  Serial.begin(9600);
+
+  //Set device as a Wi-Fi Station
+  WiFi.mode(WIFI_STA);
+
+  //Init ESP-NOW
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  // Once ESPNow is successfully Init, we will register for recv CB to
+  // get recv packer info
+  esp_now_register_recv_cb(esp_now_recv_cb_t(OnDataRecv));
+}
+
 void loop() {
-  // it will run the user scheduler as well
-  mesh.update();
+  // Acess the variables for each board
+  /*int board1X = boardsStruct[0].x;
+  int board1Y = boardsStruct[0].y;
+  int board2X = boardsStruct[1].x;
+  int board2Y = boardsStruct[1].y;
+  int board3X = boardsStruct[2].x;
+  int board3Y = boardsStruct[2].y;*/
+
+  delay(10000);
 }
 ```
+
+##### Sender Side
+
+```c
+// /*
+// * Author : Arun CS
+// * Github : https://github.com/aruncs31/
+// * URL :
+// https://github.com/aruncs31s/ESP32_MeshNet_For_Node_To_Gateway_Communication
+// sources : https://randomnerdtutorials.com/esp-now-esp32-arduino-ide/
+
+//  */
+// #include <WiFi.h>
+// #include <esp_now.h>
+
+// // Receiver in this case the gateway
+
+// uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0xED, 0x30, 0xD8};
+
+// // Structure example to send data
+// // Must match the receiver structure
+// typedef struct Data {
+//   uint8_t board_id;// change it accordingly
+//   char a[30];
+//   int b;
+//   float c;
+//   bool d;
+// } Data;
+
+// Data sender_data;
+
+
+// esp_now_peer_info_t peerInfo;
+
+// // callback when data is sent
+// void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+//   Serial.print("\r\nLast Packet Send Status:\t");
+//   Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success"
+//                                                 : "Delivery Fail");
+// }
+
+// void setup() {
+//   // Init Serial Monitor
+//   Serial.begin(9600);
+//   sender_data.board_id=1;
+//   // Set device as a Wi-Fi Station
+//   WiFi.mode(WIFI_STA);
+
+//   // Init ESP-NOW
+//   if (esp_now_init() != ESP_OK) {
+//     Serial.println("Error initializing ESP-NOW");
+//     return;
+//   }
+
+//   // Once ESPNow is successfully Init, we will register for Send CB to
+//   // get the status of Trasnmitted packet
+//   esp_now_register_send_cb(OnDataSent);
+
+//   // Register peer
+//   memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+//   peerInfo.channel = 0;
+//   peerInfo.encrypt = false;
+
+//   // Add peer
+//   if (esp_now_add_peer(&peerInfo) != ESP_OK) {
+//     Serial.println("Failed to add peer");
+//     return;
+//   }
+// }
+
+// void loop() {
+//   // Set values to send
+//   strcpy(sender_data.a, "THIS IS A CHAR");
+//   sender_data.b = random(1, 20);
+//   sender_data.c = 1.2;
+//   sender_data.d = false;
+
+//   // Send message via ESP-NOW
+//   esp_err_t result =
+//       esp_now_send(broadcastAddress, (uint8_t *)&sender_data, sizeof(sender_data));
+
+//   if (result == ESP_OK) {
+//     Serial.println("Sent with success");
+//   } else {
+//     Serial.println("Error sending the data");
+//   }
+//   delay(2000);
+// }
+#include <esp_now.h>
+#include <WiFi.h>
+
+// REPLACE WITH THE RECEIVER'S MAC Address
+uint8_t broadcastAddress[] = {0x08, 0xD1, 0xF9, 0xED, 0x30, 0xD8};
+
+// Structure example to send data
+// Must match the receiver structure
+typedef struct struct_message {
+    int id; // must be unique for each sender board
+    int x;
+    int y;
+} struct_message;
+
+// Create a struct_message called myData
+struct_message myData;
+
+// Create peer interface
+esp_now_peer_info_t peerInfo;
+
+// callback when data is sent
+void OnDataSent(const uint8_t *mac_addr, esp_now_send_status_t status) {
+  Serial.print("\r\nLast Packet Send Status:\t");
+  Serial.println(status == ESP_NOW_SEND_SUCCESS ? "Delivery Success" : "Delivery Fail");
+}
+
+void setup() {
+  // Init Serial Monitor
+  Serial.begin(9600);
+
+  // Set device as a Wi-Fi Station
+  WiFi.mode(WIFI_STA);
+
+  // Init ESP-NOW
+  if (esp_now_init() != ESP_OK) {
+    Serial.println("Error initializing ESP-NOW");
+    return;
+  }
+
+  // Once ESPNow is successfully Init, we will register for Send CB to
+  // get the status of Trasnmitted packet
+  esp_now_register_send_cb(OnDataSent);
+
+  // Register peer
+  memcpy(peerInfo.peer_addr, broadcastAddress, 6);
+  peerInfo.channel = 0;
+  peerInfo.encrypt = false;
+
+  // Add peer
+  if (esp_now_add_peer(&peerInfo) != ESP_OK){
+    Serial.println("Failed to add peer");
+    return;
+  }
+}
+
+void loop() {
+  // Set values to send
+  myData.id = 1;
+  myData.x = random(0,50);
+  myData.y = random(0,50);
+
+  // Send message via ESP-NOW
+  esp_err_t result = esp_now_send(broadcastAddress, (uint8_t *) &myData, sizeof(myData));
+
+  if (result == ESP_OK) {
+    Serial.println("Sent with success");
+  }
+  else {
+    Serial.println("Error sending the data");
+  }
+  delay(10000);
+}
+```
+
+### Connecting to the Router
+
+```mermaid
+graph TB
+A[Nodes] --> B[Gateway]
+E[Nodes] --> B[Gateway]
+B --> C(Router)
+```
+
+## Resources
+1. https://www.electronicwings.com/esp32/esp32-timer-interrupts
+2. 

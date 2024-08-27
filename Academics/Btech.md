@@ -8,10 +8,20 @@ tags: []
 
 Created : 2024-04-10 16:43
 
-## Contents
+>[!float|right-small] ## Contents
+>- [[#Semester]]
+>- [[#Tasks]]
 
+## Semester
 - [S6](#s6)
 - [S7](#s7)
+
+
+## Tasks
+```todoist
+name: "Btech"
+filter: "#Btech"
+```
 
 ### S6
 

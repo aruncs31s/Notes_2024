@@ -1,18 +1,6 @@
 {
   "nodes": [
     {
-      "id": "b3e39e8690b8d4f7",
-      "type": "text",
-      "text": "# ESP32\n#### Default AP\nIP : 172.16.33.222\nVoltage : 5 V -> USB \n\t3.3 V -> Battery",
-      "styleAttributes": {
-        "textAlign": "center"
-      },
-      "x": 380,
-      "y": 100,
-      "width": 280,
-      "height": 240
-    },
-    {
       "id": "c7ff2f6935821c1c",
       "type": "text",
       "text": "## ESP32\n#### Station 2\nIP : 172.16.33.224",
@@ -211,16 +199,6 @@
       "height": 50
     },
     {
-      "id": "87443f41950c4683",
-      "type": "text",
-      "text": "### DashBoard",
-      "styleAttributes": {},
-      "x": 931,
-      "y": 163,
-      "width": 186,
-      "height": 50
-    },
-    {
       "id": "6c74f4c96dab8272",
       "type": "text",
       "text": "## ESP32\n#### Station 1\nIP : 172.16.33.223",
@@ -233,44 +211,76 @@
       "height": 160
     },
     {
-      "id": "a6975463f6546322",
+      "id": "87443f41950c4683",
       "type": "text",
-      "text": "### Sensor 4",
+      "text": "### DashBoard",
       "styleAttributes": {},
-      "x": -60,
-      "y": 955,
-      "width": 180,
-      "height": 160
+      "x": 890,
+      "y": 100,
+      "width": 269,
+      "height": 117
+    },
+    {
+      "id": "ed192da9bc136858",
+      "type": "file",
+      "file": "Projects/Node To Node Communication/attachments/PCB Design.excalidraw.md",
+      "styleAttributes": {},
+      "x": -870,
+      "y": 360,
+      "width": 400,
+      "height": 400
+    },
+    {
+      "id": "fc366c117b0a6037",
+      "type": "text",
+      "text": "### Light Intensity Sensor\nType: ",
+      "styleAttributes": {},
+      "x": -890,
+      "y": 943,
+      "width": 220,
+      "height": 197
+    },
+    {
+      "id": "bb14c44ec63a8643",
+      "type": "text",
+      "text": "### Wind Speed Meter",
+      "styleAttributes": {},
+      "x": -590,
+      "y": 935,
+      "width": 240,
+      "height": 205
     },
     {
       "id": "ce58655986cc9b7c",
       "type": "text",
       "text": "### Sensor 3",
       "styleAttributes": {},
-      "x": -320,
-      "y": 955,
-      "width": 180,
-      "height": 160
+      "x": -300,
+      "y": 935,
+      "width": 240,
+      "height": 205
     },
     {
-      "id": "bb14c44ec63a8643",
+      "id": "a6975463f6546322",
       "type": "text",
-      "text": "### Sensor 2",
+      "text": "### Sensor 4",
       "styleAttributes": {},
-      "x": -560,
-      "y": 955,
-      "width": 180,
-      "height": 160
+      "x": -40,
+      "y": 935,
+      "width": 200,
+      "height": 205
     },
     {
-      "id": "fc366c117b0a6037",
+      "id": "b3e39e8690b8d4f7",
       "type": "text",
-      "text": "### Sensor 1\nType: ",
-      "styleAttributes": {},
-      "x": -780,
-      "y": 955,
-      "width": 180,
-      "height": 160
+      "text": "# ESP32\n#### Default AP\nIP : 172.16.33.222\nVoltage : 5 V -> USB \n\t3.3 V -> Battery",
+      "styleAttributes": {
+        "textAlign": "center"
+      },
+      "x": 390,
+      "y": 100,
+      "width": 280,
+      "height": 240
     }
   ],
   "edges": [
@@ -456,6 +466,14 @@
       "fromSide": "right",
       "toNode": "87443f41950c4683",
       "toSide": "left"
+    },
+    {
+      "id": "00654680c1033c91",
+      "styleAttributes": {},
+      "fromNode": "6c74f4c96dab8272",
+      "fromSide": "left",
+      "toNode": "ed192da9bc136858",
+      "toSide": "right"
     }
   ],
   "metadata": {}
