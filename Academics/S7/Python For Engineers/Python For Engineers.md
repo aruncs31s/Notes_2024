@@ -241,6 +241,59 @@ def prime_or_not(number):
 number = int(input("Enter a number"))
 prime_or_not(number)
 ```
+#### 26-08-2024
+##### Functions 
+#syntax
+```python
+def function_name(parameters):
+	.
+	.
+	.
+	return
+```
+`def function_name(parameters):` function header
+#example
+```python
+def sum(a,b):
+	return a+b	
+def read_input():
+	a=int(input("en num 1 "))
+	b=int(input("en num 2 "))
+	print 'sum is = ' , sum(a,b)
+
+if __name__ == '__main__':
+	read_input()
+```
+
+```python
+def sum(a,b):
+	return a+b	
+def read_input():
+	a=int(input("en num 1 "))
+	b=int(input("en num 2 "))
+	print 'sum is = ' , sum(a,b)
+
+
+def single_line_fn():
+	a=int(input("en num 1 "))
+	b=int(input("en num 2 "))
+	sum = lambda x,y:x + y
+	print 'sum is = ' , sum(a,b) 
+def largest_of_2(a,b):
+	return a>b
+
+if __name__ == '__main__':
+	a = 5 
+	b =10
+	print 'largest is ' ,( largest_of_2(a,b) and a )  or ( largest_of_2(b,a) and b )
+```
+#### Scope and Lifetime
+Scope: The 
+- [ ] C 
+Lifetime: The 
+- [ ] C
+
+      
 
 ## References
 
