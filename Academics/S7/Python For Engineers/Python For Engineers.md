@@ -289,7 +289,7 @@ if __name__ == '__main__':
 ```
 #### Scope and Lifetime
 Scope: The 
-- [ ] C 
+- [ ] C
 Lifetime: The 
 - [ ] C
 

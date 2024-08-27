@@ -25,6 +25,19 @@ cssclasses: []
 
 ##### Wind Meter
 - we can use interrupt programming for this
+
+##### Temp and Humidity Sensor
+Name: 7semi SHT40 Humidity and Temperature Sensor Probe I2C
+
+| Operating Voltage:<br> | 3.3V<br>     |
+| ---------------------- | ------------ |
+| Interface:             | I2C          |
+| Temperature Range:     | -40 to 125 C |
+| Humidity Range:        | 0~100%rh     |
+| VCC                    | Red          |
+| Black                  | GND          |
+| Yellow                 | SDA          |
+| Green                  | SCL          |
 ### ESP32 Programming
 #### Pins Used
 
@@ -423,4 +436,5 @@ B --> C(Router)
 
 ## Resources
 1. https://www.electronicwings.com/esp32/esp32-timer-interrupts
-2. 
+2. [Temp and Humidity Sensor](https://evelta.com/7semi-sht40-humidity-and-temperature-sensor-probe-i2c-plastic/)
+3. 
