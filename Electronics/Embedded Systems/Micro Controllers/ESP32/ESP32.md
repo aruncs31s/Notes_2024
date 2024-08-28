@@ -17,7 +17,7 @@ cssclasses:
 > 	5. [[Interrupt Programming]]
 > 	6. [[ESP32 Web Programming|Web Programming]]
 
->[!blank|left-medium]
+>[!blank|left-big]
 ![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
 - Built with TSMC low-power 40 nm technology
 - Designed to achieve best power and RF Performance?

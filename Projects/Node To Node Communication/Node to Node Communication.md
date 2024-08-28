@@ -437,4 +437,5 @@ B --> C(Router)
 ## Resources
 1. https://www.electronicwings.com/esp32/esp32-timer-interrupts
 2. [Temp and Humidity Sensor](https://evelta.com/7semi-sht40-humidity-and-temperature-sensor-probe-i2c-plastic/)
-3. 
+3. https://github.com/DFRobot/DFRobot_VEML7700 
+4. 
