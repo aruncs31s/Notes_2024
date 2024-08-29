@@ -296,11 +296,14 @@ Lifetime: The
       
 #### 2024-08-29
 ##### Recursive Functions
+When a function call it self
 ```python
 def function_name:
     function_name
 
 ```
+
+
 
 ## References
 
