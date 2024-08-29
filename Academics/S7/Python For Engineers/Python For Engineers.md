@@ -294,6 +294,13 @@ Lifetime: The
 - [ ] C
 
       
+#### 2024-08-29
+##### Recursive Functions
+```python
+def function_name:
+    function_name
+
+```
 
 ## References
 

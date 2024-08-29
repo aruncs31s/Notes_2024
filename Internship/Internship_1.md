@@ -44,3 +44,25 @@ Types :
 >eg: for frontend stack {anglular,css,java script , html}
 > - If the requirements are satisfied apply for the job 
 
+### Meeting 3 
+28-08-2024 20:14 
+#### Medical Device Industry 
+We think it is small but it is "not".
+- Machines are required to check for disease 
+	- eg: temperature monitor
+	- Oxygen monitor
+	- EEG , ECG
+##### Metronics
+[Web Site](https://www.metronic.com/)
+- About 1 lack emply
+- In India -> Sirgical Robots
+- Search for embedded Job -> Nearly 86 Jobs
+	- Software Engineer -> 445 Jobs
+		- Requirements -> UML , C++ , etc
+
+- Major Medical Equipment Manufactures
+
+Whatsapp:
+[20:33, 28/08/2024] Anil <- Sajesh Sir Achoora: https://www.google.com/search?q=medical+device+manufacturing+companies&oq=medical+device+man&gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBwgEEAAYgAQyBggFEEUYOTIHCAYQABiABDIHCAcQABiABDIHCAgQABiABDIHCAkQABiABDIHCAoQABiABDIHCAsQABiABDIHCAwQABiABDIHCA0QABiABDIHCA4QABiABNIBCDY3MTFqMGo5qAIPsAIB&client=ms-android-oneplus-rvo3&sourceid=chrome-mobile&ie=UTF-8&chrome_dse_attribution=1
+[20:33, 28/08/2024] 
+Anil <- Sajesh Sir Achoora: https://www.mddionline.com/business/top-40-medical-device-companies
