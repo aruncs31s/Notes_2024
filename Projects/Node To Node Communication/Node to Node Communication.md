@@ -5,28 +5,82 @@ tags: []
 Created: ""
 cssclasses: []
 ---
+
 # Node to Node Communication
-**Objective** : 
+
+**Objective** :
+
 > To make all the node to communicate with the gateway(receiver)
 
 **Methodology**:
->- Going to use [[ESP_NOW]]
-> - There Will Be 5 Nodes 
+
+> - Going to use [[ESP_NOW]]
+> - There Will Be 5 Nodes
 > - Going to use [[Electronics/Embedded Systems/Micro Controllers/ESP32/ESP32|ESP32]]
 
 **Sensors**:
-> 1. Light Intensity Sensor `VEML7700` 
+
+> 1. Light Intensity Sensor `VEML7700`
 > 2. Wind Meter
 
 ##### Light Sensor
+
 - It Uses `I2C`
 - Sample Programming [[Interfacing#Light Intensity Sensor|Light Intensity Sensor]]
 - Supply voltage range VDD: **2.5 V to 3.6 V**
 
-##### Wind Meter
+##### Wind Direction
+
+[Source](file:///home/aruncs/Documents/ESP%20Mesh/Weather_Meter_Kit_Datasheet.pdf)
+
+- A voltage must be supplied to each instrument to produce an output.
+
 - we can use interrupt programming for this
+- ==Green== Wind Direction and black
+  ![[wind_station.excalidraw]]
+  Expected Values
+
+```c
+#define SFE_WMK_ADC_ANGLE_0_0 3118
+#define SFE_WMK_ADC_ANGLE_22_5 1526
+#define SFE_WMK_ADC_ANGLE_45_0 1761
+#define SFE_WMK_ADC_ANGLE_67_5 199
+#define SFE_WMK_ADC_ANGLE_90_0 237
+#define SFE_WMK_ADC_ANGLE_112_5 123
+#define SFE_WMK_ADC_ANGLE_135_0 613
+#define SFE_WMK_ADC_ANGLE_157_5 371
+#define SFE_WMK_ADC_ANGLE_180_0 1040
+#define SFE_WMK_ADC_ANGLE_202_5 859
+#define SFE_WMK_ADC_ANGLE_225_0 2451
+#define SFE_WMK_ADC_ANGLE_247_5 2329
+#define SFE_WMK_ADC_ANGLE_270_0 3984
+#define SFE_WMK_ADC_ANGLE_292_5 3290
+#define SFE_WMK_ADC_ANGLE_315_0 3616
+#define SFE_WMK_ADC_ANGLE_337_5 2755
+```
+
+Obtained Values
+
+```c
+3938
+3950
+3941
+3951
+3943
+3939
+4095
+4095
+4095
+4095
+4095
+4095
+4095
+3945
+3948
+```
 
 ##### Temp and Humidity Sensor
+
 Name: 7semi SHT40 Humidity and Temperature Sensor Probe I2C
 
 | Operating Voltage:<br> | 3.3V<br>     |
@@ -38,7 +92,9 @@ Name: 7semi SHT40 Humidity and Temperature Sensor Probe I2C
 | Black                  | GND          |
 | Yellow                 | SDA          |
 | Green                  | SCL          |
+
 ### ESP32 Programming
+
 #### Pins Used
 
 | Sensor           | Pin            | ESP32 GPIO |
@@ -48,11 +104,11 @@ Name: 7semi SHT40 Humidity and Temperature Sensor Probe I2C
 | Wind Speed Meter | Intterrupt PIN | 13         |
 |                  |                |            |
 
-
-- Single Node 
-	- [[#Single Node Sender Side]]
-	- [[#Single Node Receiver Side]]
+- Single Node
+  - [[#Single Node Sender Side]]
+  - [[#Single Node Receiver Side]]
 - Multi Node
+
 ##### Single Node Receiver Side
 
 ```c
@@ -111,6 +167,7 @@ delay(1000);
 ```
 
 ##### Single Node Sender Side
+
 You can use [[WiFi Programming#Get MAC Address|Get Mac]] to get mac address
 
 ```c
@@ -434,8 +491,20 @@ E[Nodes] --> B[Gateway]
 B --> C(Router)
 ```
 
+### Dashboard
+
+Libraries:
+
+- [ESPAsyncWebServer](https://github.com/me-no-dev/ESPAsyncWebServer)
+
+#### Using LittleFS
+
+- [LittleFS extension](https://github.com/earlephilhower/arduino-littlefs-upload/releases)
+-
+
 ## Resources
+
 1. https://www.electronicwings.com/esp32/esp32-timer-interrupts
 2. [Temp and Humidity Sensor](https://evelta.com/7semi-sht40-humidity-and-temperature-sensor-probe-i2c-plastic/)
-3. https://github.com/DFRobot/DFRobot_VEML7700 
-4. 
+3. https://github.com/DFRobot/DFRobot_VEML7700
+4.

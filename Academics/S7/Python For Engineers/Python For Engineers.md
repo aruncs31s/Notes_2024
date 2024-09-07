@@ -241,9 +241,13 @@ def prime_or_not(number):
 number = int(input("Enter a number"))
 prime_or_not(number)
 ```
+
 #### 26-08-2024
-##### Functions 
+
+##### Functions
+
 #syntax
+
 ```python
 def function_name(parameters):
 	.
@@ -251,11 +255,13 @@ def function_name(parameters):
 	.
 	return
 ```
+
 `def function_name(parameters):` function header
 #example
+
 ```python
 def sum(a,b):
-	return a+b	
+	return a+b
 def read_input():
 	a=int(input("en num 1 "))
 	b=int(input("en num 2 "))
@@ -267,7 +273,7 @@ if __name__ == '__main__':
 
 ```python
 def sum(a,b):
-	return a+b	
+	return a+b
 def read_input():
 	a=int(input("en num 1 "))
 	b=int(input("en num 2 "))
@@ -278,32 +284,146 @@ def single_line_fn():
 	a=int(input("en num 1 "))
 	b=int(input("en num 2 "))
 	sum = lambda x,y:x + y
-	print 'sum is = ' , sum(a,b) 
+	print 'sum is = ' , sum(a,b)
 def largest_of_2(a,b):
 	return a>b
 
 if __name__ == '__main__':
-	a = 5 
+	a = 5
 	b =10
 	print 'largest is ' ,( largest_of_2(a,b) and a )  or ( largest_of_2(b,a) and b )
 ```
+
 #### Scope and Lifetime
-Scope: The 
+
+Scope: The
+
 - [ ] C
-Lifetime: The 
+      Lifetime: The
 - [ ] C
 
-      
 #### 2024-08-29
+
 ##### Recursive Functions
+
 When a function call it self
+
 ```python
 def function_name:
     function_name
 
 ```
 
+=======
 
+#### 2024-08-31
+
+##### Strings
+
+1. `.center()`
+
+```python
+s ='Hello'
+print(s.center(30))
+
+# print ** before and after
+print(s.center(30, "*"))
+```
+
+2. Is alpha
+   > Returns `True` is `all` letters are `Alphabets`
+
+```python
+# return true if it is alpha
+print(s.isalpha())
+
+# Output
+# True
+```
+
+3. `.isdigit()`
+   > Return `True` only if the string contains all digits
+
+```python
+# Return false
+print(s.isdigit())
+
+s = 5
+print(str(s).isdigit())
+```
+
+3. `.count()`
+
+```python
+s = "Hi hi hi hi "
+print(s.count("i"))
+print(s.count("hi"))
+# output
+# 4
+# 3
+```
+
+4. `.endswith()`
+
+> Returns true if string ends with the provided character
+
+```python
+print(s.endswith("hi")) # Returns true if string ends with the provided character
+
+```
+
+5. `str.find()`
+   > Returns the starting location of the given subsequence
+
+```python
+print(s.find("Hi"))
+# output
+# 0
+```
+
+6. `.join()`
+   > Contatinates 2 strings
+
+```python
+a = "Hello "
+b = "Sir"
+c = [a, b]
+print(" ".join(c))
+print("*".join(c))
+# output
+# Hello Sir
+# Hello *Sir
+```
+
+7. `.lower()`
+
+```python
+a = "HELLo"
+print(a.lower())
+# output
+# hello
+```
+
+- [ ] In and Not in operator
+
+#### 2024-09-03
+
+##### Lists
+
+```python
+
+first = [1, 2, 3, 4]
+  second = list(range(1, 5))
+  print(first)
+  print(" length is ", len(first))
+  # print single
+
+ for i in range(0, len(first)):
+     print(first[i])
+
+```
+
+> > > > > > > ebf4497 (Backup Sun Sep 8 03:11:12 AM IST 2024)
 
 ## References
 

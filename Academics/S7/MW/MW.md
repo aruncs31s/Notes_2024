@@ -50,14 +50,64 @@ cssclasses:
 > >   - Derivation of convection current,
 > >   - axialelectric field,
 > >   - wave modes and gain.
+
+>[!multi-column]
+>
+>>[!info]+ Module 4 **Rectangular Resonator and MW Tubes**
+>> **Microwave Introductions**
+>>- [ ] Advantages
+>>- [ ] Cavity Resonator
+>>- [ ] Derivation of Resonance Fre.
+>>**Single cavity klystron- Reflex Klystron**
+>>Oscillators:
+>> - [ ]	Derivation of Power output
+>> - [ ] efficiency and admittance. 
+>> **Magnetron oscillators**
+>> - [ ] Cylindrical magnetron,
+>> - [ ] Cyclotron angular frequency,
+>> - [ ] Power output and efficiency.
+>>**Travelling Wave Tubes**
+>>- [ ] Slow wave structures,
+>>- [ ] Helix TWT,
+>>- [ ] Amplification process,
+>>- [ ] Derivation of convection current,
+>>- [ ] axial electric field,
+>>- [ ] wave modes and gain
+> 
+>> [!info] Module 3
 ## Classes
 1. [[#Resonator|07.08.2024 9:05AM]]
+
+## Module 1 
+
+```mermaid
+graph LR 
+A[Antenna] --> B[Wire Antenna] 
+A --> C[Aperture Antenna]
+A --> D[Microstrip Antenna]
+A --> E[Reflector Antenna]
+A --> F[Lens Antenna]
+
+B --> G(Dipole antenna)
+B --> H(Loop antenna)
+B --> I(Helix antenna)
+C --> J(Horn Antenna)
+E --> EA(Parabloic Antenna)
+E --> EB(Cornor Reflector)
+```
 
 ##### Types of antenas
 
 1. Isotropic Antenas
 2. Omnidirectional Antena
 3. Directive antenas
+
+#### Thevenin Equivalent of Antennan System in Tx Mode 
+
+![[antenna thevenin eq.excalidraw]]
+$Vg$ : Voltage Generator 
+$Zg$ : Source Impedance 
+$Zc$ : Characteristic Impedance of the tx line
 
 ## Module 2
 
@@ -102,6 +152,11 @@ $m,n,p$ -> No of half cycles along the direction $x,y,z$
 $$
 k = kx^{2}+ ky^{2}+ kz^2
 $$
+
+
+
+## Module 4 RECTANGULAR RESONATOR AND MICROWAVE TUBES
+
 
 ## References
 

@@ -9,7 +9,7 @@ Created : 2024-05-14 20:50
 1. Unit Hypotenuse
 $$
 \sin^2 \theta + \cos^2 \theta = 1
-$$
+$$ ^d8dee6
 2. sico + cosi
 $$
 \sin(x+y) = \sin x \cos y + \cos x \sin y 

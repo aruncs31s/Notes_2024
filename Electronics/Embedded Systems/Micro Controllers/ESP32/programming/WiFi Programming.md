@@ -41,7 +41,9 @@ delay(500);
 | `.disconnect()`                   |                     |
 | `.reconnect()`                    |                     |
 | `.softAP("ESP32_AP", "password")` |                     |
+
 #### Connecting to WiFi
+
 ```c
 #include <WiFi.h>
 
@@ -50,7 +52,7 @@ const char* password = "change";
 
 void setup(){
 	Serial.begin(9600);
-	WiFi.begin(ssid,passwd); 
+	WiFi.begin(ssid,passwd);
 	 while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
@@ -58,8 +60,8 @@ void setup(){
 }
 void loop(){
 
-}  
-	
+}
+
 ```
 
 #### Static IP
