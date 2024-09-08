@@ -2,7 +2,7 @@
 id: Git
 aliases: []
 tags: []
-banner: https://github.blog/wp-content/uploads/2023/05/1200.630-Security-wLogo.png?w=1200
+banner: "https://github.blog/wp-content/uploads/2023/05/1200.630-Security-wLogo.png?w=1200"
 banner_y: 0.552
 cssclasses:
   - wide-page
@@ -10,8 +10,7 @@ cssclasses:
 
 # Git
 
-- [[1722694456-PFUM|Branchers]]
-
+- [Branches](./Branches.md)
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Initial Setup](#initial%20setup)

@@ -5,7 +5,7 @@ aliases:
 tags: []
 ---
 
-# Branchers
+# Branches
 
 #### Adding a branch locally and submitting it to remote
 
