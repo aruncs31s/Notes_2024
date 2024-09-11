@@ -4,16 +4,13 @@ aliases: []
 tags: []
 ---
 
-
 #### Analog Interfacing
+
 - [Introduction](#introduction)
 - [Sources](#sources)
 
+#### Introduction
 
-
-
-
-#### Introduction 
 - ADC will have a defined resolution and a reference voltage which is usually the supply voltage
 - Maximum Possible Value
 
@@ -21,7 +18,7 @@ $$
 Max = 2^N -1
 $$
 
-*Where N = resolution*
+_Where N = resolution_
 
 - If resolution is `8 bit`
 
@@ -29,14 +26,15 @@ $$
 Max = 255
 $$
 
-
  <details>
 <summary>Example</summary>
 Thus, if the reference voltage is 5V and an 8−bit ADC is used, then 5V corresponds to a reading of 255, 1V corresponds to a reading of (255/5*1) = 51, 2V corresponds to a reading (255/5*2) = 102 and so on. If we had a 12 bit ADC, then 5V would correspond to a reading of 4095, 1V would correspond to a reading of (4095/5*1) = 819, and so on.
 </details>
 
 #CalculateResolution
+
 - Static
+
 ```rust
 fn main() {
 // Define The Number of Resolution
@@ -48,7 +46,8 @@ fn main() {
 ```
 
 - Dynamic
-	- By Rust
+  - By Rust
+
 ```rust
 fn main() {
     let mut N = String::new();
@@ -70,17 +69,16 @@ fn main() {
 ```
 
 - By Python
+
 ```python
 N=int(input("Enter the ADC Value"))
 print("Max Value = " ,2**N -1)
 ```
 
-
-
-
-
 #ComputeVoltage
+
 - Static
+
 ```rust
 //Compute the voltage with obtained value of adc
 fn main(){
@@ -93,6 +91,7 @@ println!("Voltage = {}",(reference_voltage *obtained_adc_val as f32)/Max)
 ```
 
 - Dynamic
+
 ```rust
 fn main() {
     // Read The ADC Value form user
@@ -137,17 +136,17 @@ fn main() {
 }
 ```
 
-
-
 ## Example
+
 #### Connecting ADC Sensors With ESP32
+
 - [Conecting LDR Sensor ]()
+
 ##### Connecting LDR Sensor
 
 [[Projects/Iot_based_smart_energy_management_system/Sensors/LDR Sensor]]
 
 ![[Projects/Iot_based_smart_energy_management_system/Files/Images/Pasted image 20240328225646.png|300x250]]
-
 
 `Credit` [Intercaing Code](https://github.com/yash-sanghvi/ESP32/blob/master/AnalogReadWithLDR/AnalogReadWithLDR.ino)
 
@@ -164,7 +163,7 @@ void loop() {
 }
 ```
 
-
 #### Sources
-- [Source1](https://www.tutorialspoint.com/esp32_for_iot/interfacing_esp32_with_analog_sensors.htm#:~:text=In%20the%20image%20shown%20below,36%20(VN)%20of%20ESP32.)
-- 
+
+- [Source1](<https://www.tutorialspoint.com/esp32_for_iot/interfacing_esp32_with_analog_sensors.htm#:~:text=In%20the%20image%20shown%20below,36%20(VN)%20of%20ESP32.>)
+-

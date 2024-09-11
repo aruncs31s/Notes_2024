@@ -96,3 +96,13 @@ if (!WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS)) {
   Serial.println(WiFi.localIP());
   }
 ```
+
+#### Reconnect After Disconnect
+
+```c
+if ((WiFi.status) != WL_CONNECTED ){
+  WiFi.disconnect();
+  delay(100);
+  WiFi.reconnect();
+}
+```

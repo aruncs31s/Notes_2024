@@ -2,7 +2,7 @@
 id: Git
 aliases: []
 tags: []
-banner: "https://github.blog/wp-content/uploads/2023/05/1200.630-Security-wLogo.png?w=1200"
+banner: https://github.blog/wp-content/uploads/2023/05/1200.630-Security-wLogo.png?w=1200
 banner_y: 0.552
 cssclasses:
   - wide-page
@@ -10,19 +10,20 @@ cssclasses:
 
 # Git
 
-- [Branches](./Branches.md)
 - [Introduction](#introduction)
-- [Installation](#installation)
-- [Initial Setup](#initial%20setup)
-- [Basics](#basics)
+- [[#**Basics**]]
+
+  - [Installation](#installation)
+  - [Initial Setup](#initial%20setup)
   - [[#Pushing Changes to Github]]
   - [[#Kick Start]]
   - [Submitting that change]()
-- [[#Dropping Commits]]
-- [[#Merge Conflict]]
-- [[#Advanced]]
+  - [[#Dropping Commits]]
+
+- [[Advanced]]
+  - [[#Merge Conflict]]
+  - [[#Advanced]]
   - [[#aliasing]]
-  -
 
 ### **Introduction**
 
@@ -43,68 +44,9 @@ Git is a `source control` created for the `Linux` Kernel by `Linus Torvalds`.
 
 ---
 
-### **Installation**
-
-- Windows [Click Here](https://git-scm.com/download/win)
-- Debian
-
-```bash
-sudo apt install git
-```
-
-- Fedora
-
-```bash
-sudo dnf install git
-```
-
-- Arch Linux
-
-```
-sudo pacman -S git
-```
-
----
-
-### **Initial Setup**
-
-This only required to do once like configuring user email and user name .
-
-- Setting up you identity
-
-```
-git config --global user.name "You name"
-git config --global user.email youremail@google.com
-```
-
-_You can exclude `--global` flag it sets this properties as global but if you want to keep repository wise configs you simply exclude that_
-
-- You can use the following to see saved configs
-
-```bash
-git config --list
-```
-
----
-
 ### **Basics**
 
-- [Creatig a repo](#creating%20a%20repo)
 - [[#Kick Start]]
-- [[#Git Stash]]
-
-#### Creating a repo
-
-- [[Branch]]
-
-- [Merge Conflict](#mergeconflict)
-
-#### Pushing Changes to Github
-```bash
-git add -A 
-git commit -m "added <this File>" # Change this accrdingly
-git push origin main
-```
 
 #### Kick Start
 
@@ -128,7 +70,61 @@ git branch -M main
 git push -u origin main
 ```
 
-#### Merge Conflict
+#### **Installation**
+
+- Windows [Click Here](https://git-scm.com/download/win)
+- Debian
+
+```bash
+sudo apt install git
+```
+
+- Fedora
+
+```bash
+sudo dnf install git
+```
+
+- Arch Linux
+
+```
+sudo pacman -S git
+```
+
+---
+
+#### **Initial Setup**
+
+This only required to do once like configuring user email and user name .
+
+- Setting up you identity
+
+```
+git config --global user.name "You name"
+git config --global user.email youremail@google.com
+```
+
+_You can exclude `--global` flag it sets this properties as global but if you want to keep repository wise configs you simply exclude that_
+
+- You can use the following to see saved configs
+
+```bash
+git config --list
+```
+
+#### Creating a repo
+
+```bash
+gh repo create
+```
+
+#### Pushing Changes to Github
+
+```bash
+git add -A
+git commit -m "added <this File>" # Change this accrdingly
+git push origin main
+```
 
 #### Dropping Commits
 
@@ -252,15 +248,15 @@ git push origin --delete branch_name
 
 #### Git Stash
 
-```bash
+````bash
 git stash list
-```
-
+``GCEK_Weather_Station`
+GCEK_Weather_Station
 - To show the `stashes`
 
 ```bash
 git stash show <stash index>
-```
+````
 
 ```bash
 git stash pop
@@ -313,3 +309,12 @@ git blame -w -C -C -C
 - detect lines moved or copied in the same commit
 - commit that created the file
 - any commit at all.
+
+#### Duplicating a repo
+
+```bash
+git clone --bare https://github.com/aruncs31s/<old_repo_link>
+gh create repo
+cd old_repo
+git push --mirror https://github.com/aruncs31s/<New_repo>
+```

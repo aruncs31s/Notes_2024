@@ -11,7 +11,7 @@ cssclasses:
 
 # Adaptive Gain Adjustment of 5GHz Antenna for Environmental Factor Variation Using Machine Learning
 
-> [!float|right-small] Contents
+> [!blank|right-small] Contents
 >
 > - [[#Motivation]]
 > - [[#Objective]]
@@ -29,7 +29,7 @@ cssclasses:
 ### Objective
 
 - We are going to develop adaptive **==5GHz==** antennas for wireless communication
-- This project focuses on designing an adaptive antenna system that leverages machine learning techniques to adjust its parameters dynamically in response to changes in environmental factors such as temperature, humidity, and obstacles
+- This project focuses on designing an adaptive antenna system **that leverages machine learning techniques** to adjust its parameters dynamically in response to **changes in environmental factors such as temperature, humidity, and obstacles**
 
 ### Methodology
 

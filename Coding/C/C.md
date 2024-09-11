@@ -4,6 +4,12 @@ aliases: []
 tags: []
 ---
 
+# C
+
+- [[Functions]]
+- [[mathFunctions]]
+- [[Pointers]]
+
 ## Data Types
 
 #### Constant Strings
@@ -26,8 +32,11 @@ a = 20
 ```c
 a = (a> b) ? 10 : 20
 ```
-#### Switch Statement 
+
+#### Switch Statement
+
 [Source](https://www.geeksforgeeks.org/c-switch-statement/)
+
 ```c
 switch(expression)
 {
