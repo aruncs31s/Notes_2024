@@ -425,6 +425,45 @@ first = [1, 2, 3, 4]
 
 > > > > > > > ebf4497 (Backup Sun Sep 8 03:11:12 AM IST 2024)
 
+#### 2024-09-12
+- [  ]  Dictionary
+
+##### Dictionary 
+#syntax
+```python
+a_dict = {"key" : "value" , "key1" : "value1" }
+a_dict["key"]
+a_dict["key2"]
+```
+
+#example
+```python
+a = { "name" : "Something" , "age" : "23"}
+print(a['name'])
+print(a["age"])
+```
+
+- Adding Keys and replacing keys
+- We can use `[]` operator
+```python
+a_dict["some key"] = "new_value" 
+```
+#example
+```python
+a = { "age" : "23","name" : "Something" }
+print(a['name'])
+print(a["age"])
+a["college"] = "GCEK"
+print(a)
+```
+- Replacing Values
+```python
+a["college"] = "GCEK"
+print(a)
+a["college"] = "CET"  
+print(a)
+```
+
 ## References
 
 1. [[python]]
