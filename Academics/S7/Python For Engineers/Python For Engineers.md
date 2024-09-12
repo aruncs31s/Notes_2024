@@ -464,6 +464,50 @@ a["college"] = "CET"
 print(a)
 ```
 
+##### Set
+- uses only elements seperated by ","
+#example
+```python
+fruits = {"fruit_1","fruit_2","fruit_3"}
+```
+```python
+a = { "age" : "23","name" : "Something" }
+print(a['name'])
+print(a["age"])
+a["college"] = "GCEK"
+print(a)
+a["college"] = "CET"  
+print(a)
+# Prints None if the value is not exist 
+print(a.get("marks",None)) # .get is the replacement for has_key
+print(a.get("marks",True))
+print(a.get("marks",False))
+print(a.get("name",False))
+##### Alternative to get 
+try: 
+	print(a["marks"])
+except:
+	 print(None)
+	
+# .pop method is used to remove 
+a.pop("name")
+print(a)
+a.pop("name",None)
+
+# len(a) return the length of entries 
+print(len(a))
+
+############## SET ###########
+fruits = {'apple','orenge'}
+
+print("apple" in fruits)
+print(fruits)
+## pop in set
+# It remove the last index item 
+fruits.pop()
+print(fruits)
+```
+
 ## References
 
 1. [[python]]
