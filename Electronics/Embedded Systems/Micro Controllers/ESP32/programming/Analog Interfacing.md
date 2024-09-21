@@ -6,15 +6,33 @@ tags: []
 
 #### Analog Interfacing
 
-- [Introduction](#introduction)
-- [Sources](#sources)
+> [!blank|right-small]
+> ![[esp32 non linear.excalidraw]]
+
+- Non Linear
+- Can not measure 0-0.2 and 3.2-3.3
+
+#syntax
+
+```arduino
+analogRead(pin_number);
+```
+
+### Usefull Functions
+
+1. analogReadMilliVolts(pin)
+
+```c
+analogReadMilliVolts()
+```
 
 > [!float|right-small] ADC2
 > **ADC2** can't be used while using wifi
 > [25,26,14,12,13,04,02,15]
 
-#### Introduction
+> [!blank|left-small] > ![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-ADC-Pins.png)
 
+- Has 2 12-bit SAR ADCs {ADC1 , ADC2}
 - ADC will have a defined resolution and a reference voltage which is usually the supply voltage
 - Maximum Possible Value
 
@@ -66,10 +84,21 @@ void loop() {
 #### Measure Voltage using ADC Pins
 
 ```bash
+float analog_voltage = 0;
+float get_voltage(int adc_value) {
+   return VMIN + (adc_value / ADC_MAX_12);
 
+}
+
+void setup(){
+   Serial.begin(9600);
+}
+void loop(){
+analog_value = analogRead(adc_pin);
+analog_voltage = get_voltage(analog_value);
+}
 ```
 
 ## Sources
 
 - [Source1](<https://www.tutorialspoint.com/esp32_for_iot/interfacing_esp32_with_analog_sensors.htm#:~:text=In%20the%20image%20shown%20below,36%20(VN)%20of%20ESP32.>)
--

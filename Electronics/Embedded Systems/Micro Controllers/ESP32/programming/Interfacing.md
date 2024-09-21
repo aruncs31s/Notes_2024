@@ -189,9 +189,7 @@ void loop() {
 
 ---
 
-#### Light Intensity Sensor
-
-Sensor : VEML7700
+#### VEML7700 Light Sensor
 
 - Connect Sensor's VCC to 3.3
 - Connect GND

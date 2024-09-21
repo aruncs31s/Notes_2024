@@ -16,7 +16,8 @@ cssclasses:
 > - [[#Motivation]]
 > - [[#Objective]]
 > - [[#Methodology]]
-
+## Prerequisites
+- [Communication](./Communication.md)
 ### Motivation
 
 #### Advantages of 5Ghz

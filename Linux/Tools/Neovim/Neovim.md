@@ -4,6 +4,13 @@ aliases: []
 tags: []
 ---
 
+# Neovim
+
+- [[#Quick Fix List]]
+- [[#Sessions]]
+- [[#Tabs]]
+- [[#Registers]]
+
 ### Contents
 
 - [Good LSPs](#good%20lsps)
@@ -56,3 +63,37 @@ Control + X -> Decrement
 
 - Select the lines using `Ctrl+V` or `v  + j`
 - Then type `g Ctrl + A `
+
+#### Sessions
+
+- Saving sessions
+
+```bash
+:mksession <session_name>.vim
+```
+
+To open the saved session
+
+```bash
+source <session_name>.vim
+```
+
+#### Tabs
+
+1. Move the current window to a new tab
+
+```bash
+Ctrl+w T
+```
+
+#### Registers
+
+1. Copy to a Register
+
+```vim
+"ay
+```
+
+Registers: There are named registers like `a-z` and numbers `0-9`
+`0` -> last copied text
+`1-9` -> last deleted texts

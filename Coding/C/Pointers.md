@@ -100,6 +100,88 @@ hi
 */
 ```
 
+### Null Pointer
+
+**Null pointer** is a pointer that does not point to any value.That is it does not point to any address.
+
+```c
+int *p = NULL;
+```
+
+this can be also done using
+
+```c
+int *p;
+p=0;
+```
+
+### Generic Pointer
+
+It has a `void` datatype
+
+```c
+void *ptr;
+```
+
+- It can not be dereferenced , so casting is required.
+
+```c
+int main() {
+  int x = 10;
+  void *ptr;
+  ptr = &x;
+  printf("The value of x =%d ", *(int *)ptr);
+}
+```
+
+### Pointer to Pointer
+
+```c
+int main() {
+  int x = 10;
+  int *ptr, **pptr;
+  ptr = &x;
+  pptr = &ptr;
+  printf("The value of x is %d\n", **pptr);
+}
+```
+
+
+#### Accessing values inside a struct pointer 
+```c
+#include <stdio.h>
+struct somethin {
+  int value;
+  char *name;
+};
+int main(int argc, char *argv[]) {
+  struct somethin *new_struct;
+  new_struct->value = 10;
+
+  printf("value = %d", (*new_struct).value);
+  return 0;
+}
+```
+- This compiled and run successfully on `gcc version 14.2.1 20240805 (GCC)` but failed to run in `clang 18.1.8`
+#correctCode
+```c
+#include <stdio.h>
+#include <stdlib.h>
+struct somethin {
+  int value;
+  char *name;
+};
+int main(int argc, char *argv[]) {
+  struct somethin *new_struct = malloc(sizeof(struct somethin));
+  new_struct->value = 10;
+
+  printf("value = %d", (*new_struct).value);
+  return 0;
+}
+```
+
+- `->` operator combines both `*` and `.` so `(*new_struct).value` and `new_struct->value` will do the same thing.
+- 
 ## References
 
 1. [Source 1](https://embetronicx.com/tutorials/p_language/c/pointers_2/)

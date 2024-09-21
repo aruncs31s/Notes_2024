@@ -1,11 +1,19 @@
 ---
 id: Gcek Weather Prediction
 aliases: []
-tags: []
-Created: "08-09-2024"
+tags:
+  - project
+Completed: false
+Starting Date: "2024-09-12"
+Status: true
+Target Date: "2024-09-23"
 ---
 
 # Gcek Weather Prediction
+
+#tasks
+
+- [ ] Implement predictions based on obtained data using [Weather data scraper](https://github.com/aruncs31s/GCEK_Weather_Meter_Scraper)
 
 [Source](https://janaksenevirathne.medium.com/building-a-weather-prediction-model-with-machine-learning-a-step-by-step-guide-9eaf768171be)
 
