@@ -62,10 +62,11 @@ _How fast a function grows with the input size_ -> Rate of Growth of running tim
 
 - Provides the best case scenario of running an algorithm
 - Gives minimum amount of resources (time or space) an algorithm would take to run
-### Sorting 
-- [[Quick Sort ]]
+
+### Sorting
+
+- [[Quick Sort]]
+
 ## References
 
-
 1. https://youtu.be/Lwr3-doAgaI?si=gUm8h1YKggn3lUGw
-

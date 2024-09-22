@@ -21,3 +21,8 @@ tags: []
 - Dynamic Adjustment: Adjusts the modulation scheme based on the channel conditions.
 - Improved Spectral Efficiency
 - Constant Bit Error Rate (BER)
+
+**Here the modulation scheme is changed based on the channel conditions**. The modulation scheme is changed based on the **Signal-to-Noise Ratio (SNR)** of the channel.
+Also the receiver should also know the change in modulation scheme in order to decode the information.
+
+- This paper mainly focus on error performance and spectral efficiency of **Adaptive Modulation** Schemes.
