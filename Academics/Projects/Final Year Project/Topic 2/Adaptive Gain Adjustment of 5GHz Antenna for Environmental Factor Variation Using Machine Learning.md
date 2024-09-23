@@ -2,23 +2,30 @@
 id: Topic 2
 aliases:
   - final year project topic
+  - topic 2
 tags:
-  -  #antenna
-Created: "15-08-2024"
+  - topic2
+  - advantages
+Created: 15-08-2024
 cssclasses:
   - wide-page
 ---
 
 # Adaptive Gain Adjustment of 5GHz Antenna for Environmental Factor Variation Using Machine Learning
 
-> [!blank|right-small] Contents
->
-> - [[#Motivation]]
-> - [[#Objective]]
-> - [[#Methodology]]
-## Prerequisites
-- [Communication](./Communication.md)
-### Motivation
+## Prerequisites:
+- [[Machine Learning]]
+- [[Analog and Digital Communication]]
+- [[MIMO]]
+- [[ESP32]]
+---
+## Motivation
+
+- Wireless Communication get highly effected by environmental conditions.
+- not all power transmitted will reach the receiver due to following facts
+	- Attenuation
+	- Destructive interference
+
 
 #### Advantages of 5Ghz
 
@@ -27,12 +34,12 @@ cssclasses:
 - High Bandwidth
 - Lower Latency
 
-### Objective
+## Objective
 
-- We are going to develop adaptive **==5GHz==** antennas for wireless communication
-- This project focuses on designing an adaptive antenna system **that leverages machine learning techniques** to adjust its parameters dynamically in response to **changes in environmental factors such as temperature, humidity, and obstacles**
+- develop adaptive **5GHz** antennas for wireless communication
+- adaptive antenna system **that leverages machine learning techniques** to adjust its parameters dynamically in response to **changes in environmental**
 
-### Methodology
+## Methodology
 
 We are trying to dynamically change its parameters to maintain signal quality
 
@@ -49,7 +56,8 @@ We are trying to dynamically change its parameters to maintain signal quality
    2. Control algorithm using machine learning which will decide which factor to be changed in order to get maximum output
    3. Make a feedback mechanism if possible -> which enable constant control of the parameters through the communication between the reciever and the transmitter
 
-### Learning
+
+## Learning
 
 1. Wireless Communication Basics
    - 5Ghz frequency Band
@@ -89,9 +97,19 @@ We are trying to dynamically change its parameters to maintain signal quality
    - Control Antenna parameters using MC or SBC? or SDR ?
    -
 
-### Papers
+
+## Literature survey
 
 1. [[Design and Analysis of Microstrip Patch Antenna for Wireless Communication]]
+2. [Enhancing Wi-Fi communication with effective CSI approximations](https://researchoutreach.org/articles/enhancing-wi-fi-communication-with-effective-csi-approximations/)
+
+## Working 
+### ML Involvement
+1. **Predicting CSI at Receiver Side**: CSI is measured at the receiver , so in  usual communication  system the `CSI` details is send back to the transmitter ,  ==This involves significant overhead==, such as on 20-MHz channels with 64 subcarriers i.e. carrier waves that are modulated to send additional information [^2]
+> Dr Zhang and his team have discovered that CSI vectors in Wi-Fi networks can be approximated by a linear combination of as few as three sinusoids
+>- These findings underpin Zhang’s development of CSIApx, an innovative compression methodology which offers high compression ratios with little loss of accuracy and the added advantage of low computation complexity resulting in a favourable reduction in overhead. [^2]
+1. 
+[^2]: [Enhancing Wi-Fi communication with effective CSI approximations](https://researchoutreach.org/articles/enhancing-wi-fi-communication-with-effective-csi-approximations/)
 #### Resources
 
 1. Cources about

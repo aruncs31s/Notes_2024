@@ -6,6 +6,17 @@ tags: []
 
 # QAM (Quadrature Amplitude Modulation)
 
+It translates digital packets into analog packets, by varying the phase and the Amplitude of radio waves.
+
+- It improves spectral efficiency by incorporating more bits into data transmition
+- Used in [[WiFi6|Wifi7]](IEE 802.11be)
+
+$$
+\text{Bits Per Symbol} = \log_2{\text{constellation points}}
+$$
+
+- No of Symbols = QAM Modulation Order
+
 ## Papers
 
 - [An Introduction to Adaptive QAM Modulation Schemes for Known and Predicted Channels](#an%20introduction%20to%20adaptive%20qam%20modulation%20schemes%20for%20known%20and%20predicted%20channels)

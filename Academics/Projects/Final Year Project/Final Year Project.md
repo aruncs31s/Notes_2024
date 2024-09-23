@@ -10,7 +10,7 @@ cssclasses:
 # Final Year Project
 
 1. [[Academics/Projects/Final Year Project/Topic 1/Topic 1|Topic 1]]
-2. [[Academics/Projects/Final Year Project/Topic 2/Topic 2|Topic 2 Adaptive Antenna Gain]]
+2. [[Adaptive Gain Adjustment of 5GHz Antenna for Environmental Factor Variation Using Machine Learning|Topic 2 Adaptive Antenna Gain]]
 
 ---
 
