@@ -9,14 +9,14 @@ cssclasses:
 
 # ESP32
 
-- [[#Introduction]]
-- [[#Programming]]
-  1.  [[WiFi Programming]]
-  2.  [[interfacing]]
-  3.  [[multitasking]]
-  4.  [[ESP-NOW]]
-  5.  [[Interrupt Programming]]
-  6.  [[ESP32 Web Programming|Web Programming]]
+- [#Introduction]
+- [#Programming]
+  1.  [WiFi Programming](./programming/WiFi Programming.md)
+  2.  [interfacing]
+  3.  [multitasking]
+  4.  [ESP-NOW]
+  5.  [Interrupt Programming]
+  6.  [ESP32 Web Programming|Web Programming]
 
 #Introduction
 
