@@ -9,8 +9,8 @@ cssclasses:
 
 # ESP32
 
-- [#Introduction]
-- [#Programming]
+- [Introduction](#Introduction)
+- [Programming](#programming)
   - [WiFi Programming](./programming/WiFi Programming.md)
   - [interfacing]
   - [multitasking]
