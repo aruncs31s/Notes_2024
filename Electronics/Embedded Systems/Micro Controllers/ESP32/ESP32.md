@@ -11,12 +11,12 @@ cssclasses:
 
 - [#Introduction]
 - [#Programming]
-  1.  [WiFi Programming](./programming/WiFi Programming.md)
-  2.  [interfacing]
-  3.  [multitasking]
-  4.  [ESP-NOW]
-  5.  [Interrupt Programming]
-  6.  [ESP32 Web Programming|Web Programming]
+  - [WiFi Programming](./programming/WiFi Programming.md)
+  - [interfacing]
+  - [multitasking]
+  - [ESP-NOW]
+  - [Interrupt Programming]
+  - [ESP32 Web Programming|Web Programming]
 
 #Introduction
 
