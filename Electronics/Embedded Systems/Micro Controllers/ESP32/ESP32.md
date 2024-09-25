@@ -9,16 +9,19 @@ cssclasses:
 
 # ESP32
 
+> - [[#Introduction]]
 > - [[#Programming]]
-> 	1. [[WiFi Programming]]
-> 	2. [[interfacing]]
-> 	3. [[multitasking]]
-> 	4. [[ESP-NOW]]
-> 	5. [[Interrupt Programming]]
-> 	6. [[ESP32 Web Programming|Web Programming]]
+>   1.  [[WiFi Programming]]
+>   2.  [[interfacing]]
+>   3.  [[multitasking]]
+>   4.  [[ESP-NOW]]
+>   5.  [[Interrupt Programming]]
+>   6.  [[ESP32 Web Programming|Web Programming]]
 
->[!blank|left-big]
-![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
+#Introduction
+
+> [!blank|left-big] > ![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
+
 - Built with TSMC low-power 40 nm technology
 - Designed to achieve best power and RF Performance?
 - [Datasheet](https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf)

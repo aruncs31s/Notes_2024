@@ -6,7 +6,7 @@ tags: []
 
 # ESP_IDF
 
-Installation:
+### Installation: Arch Linux
 
 ```bash
 git clone --recursive  https:/github.com/espressif/esp-idf
@@ -31,7 +31,6 @@ export IFD_PATH=~/path_to/esp-idf
 ```
 
 ```bash
-
 arduino-cli core install esp32:esp32
 arduino-cli esp32 config init
 git clone --recursive  https:/github.com/espressif/esp-idf.git
