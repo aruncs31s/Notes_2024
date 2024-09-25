@@ -20,7 +20,7 @@ cssclasses:
 
 #Introduction
 
-> [!blank|left-big] > ![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
+![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
 
 - Built with TSMC low-power 40 nm technology
 - Designed to achieve best power and RF Performance?
