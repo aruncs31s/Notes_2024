@@ -102,7 +102,22 @@ We are trying to dynamically change its parameters to maintain signal quality
 
 1. [[Design and Analysis of Microstrip Patch Antenna for Wireless Communication]]
 2. [Enhancing Wi-Fi communication with effective CSI approximations](https://researchoutreach.org/articles/enhancing-wi-fi-communication-with-effective-csi-approximations/)
+3. [[#Study of the effect of Inland Water bodies on Line Of Sight Communication using Machine Learning at 5GHz]]
+### Study of the effect of Inland Water bodies on Line Of Sight Communication using Machine Learning at 5GHz
+Link : [[Study of the effect of Inland Water bodies on Line Of Sight Communication using Machine Learning at 5GHz]]
 
+This paper studied the the effect of inland water bodies on  5GHz Communication and Modeled a Line Of Sight(LOS) communication channel over inland water bodies using **[[Machine Learning]]**
+
+**Result:** The studies found that **when temperature increases the attenuation also increases** for channel Between water bodies also increases. Which show that the the attenuation of signals in the **day** time is greater than attenuation at **night**
+**Algorithm Used**: ==Random Forest== -> For predicting channels betweeen water bodies 
+
+**Key Terms**: [[Machine Learning]] ,[[Communication]] ,[[5Ghz]] 
+
+##### How this help our project 
+>- This paper shows that when temperature increases attenuation also increases and because there is comp taratively less temperature at night we can **reduce the transmission power** at night and increase at day times.
+>	- This also shows that a static non varying system will suffer from attenuation during daytime
+
+>- Also they used the help of machine learning to model the channel between water bodies 
 ## Working 
 ### ML Involvement
 1. **Predicting CSI at Receiver Side**: CSI is measured at the receiver , so in  usual communication  system the `CSI` details is send back to the transmitter ,  ==This involves significant overhead==, such as on 20-MHz channels with 64 subcarriers i.e. carrier waves that are modulated to send additional information [^2]

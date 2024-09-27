@@ -156,7 +156,7 @@ for i in range(1,11):
 
 ##### while loops
 
-# syntax
+#syntax
 
 ```python
 while <condition>:
@@ -426,10 +426,13 @@ first = [1, 2, 3, 4]
 > > > > > > > ebf4497 (Backup Sun Sep 8 03:11:12 AM IST 2024)
 
 #### 2024-09-12
-- [  ]  Dictionary
 
-##### Dictionary 
+- [ ] Dictionary
+
+##### Dictionary
+
 #syntax
+
 ```python
 a_dict = {"key" : "value" , "key1" : "value1" }
 a_dict["key"]
@@ -437,6 +440,7 @@ a_dict["key2"]
 ```
 
 #example
+
 ```python
 a = { "name" : "Something" , "age" : "23"}
 print(a['name'])
@@ -445,10 +449,13 @@ print(a["age"])
 
 - Adding Keys and replacing keys
 - We can use `[]` operator
+
 ```python
-a_dict["some key"] = "new_value" 
+a_dict["some key"] = "new_value"
 ```
+
 #example
+
 ```python
 a = { "age" : "23","name" : "Something" }
 print(a['name'])
@@ -456,45 +463,50 @@ print(a["age"])
 a["college"] = "GCEK"
 print(a)
 ```
+
 - Replacing Values
+
 ```python
 a["college"] = "GCEK"
 print(a)
-a["college"] = "CET"  
+a["college"] = "CET"
 print(a)
 ```
 
 ##### Set
+
 - uses only elements seperated by ","
-#example
+  #example
+
 ```python
 fruits = {"fruit_1","fruit_2","fruit_3"}
 ```
+
 ```python
 a = { "age" : "23","name" : "Something" }
 print(a['name'])
 print(a["age"])
 a["college"] = "GCEK"
 print(a)
-a["college"] = "CET"  
+a["college"] = "CET"
 print(a)
-# Prints None if the value is not exist 
+# Prints None if the value is not exist
 print(a.get("marks",None)) # .get is the replacement for has_key
 print(a.get("marks",True))
 print(a.get("marks",False))
 print(a.get("name",False))
-##### Alternative to get 
-try: 
+##### Alternative to get
+try:
 	print(a["marks"])
 except:
 	 print(None)
-	
-# .pop method is used to remove 
+
+# .pop method is used to remove
 a.pop("name")
 print(a)
 a.pop("name",None)
 
-# len(a) return the length of entries 
+# len(a) return the length of entries
 print(len(a))
 
 ############## SET ###########
@@ -503,11 +515,150 @@ fruits = {'apple','orenge'}
 print("apple" in fruits)
 print(fruits)
 ## pop in set
-# It remove the last index item 
+# It remove the last index item
 fruits.pop()
 print(fruits)
 ```
 
+##### Dictionary
+
+#syntax
+
+```python
+a_dict = {"key" : "value" , "key1" : "value1" }
+a_dict["key"]
+a_dict["key2"]
+```
+
+#example
+
+```python
+a = { "name" : "Something" , "age" : "23"}
+print(a['name'])
+print(a["age"])
+```
+
+- Adding Keys and replacing keys
+- We can use `[]` operator
+
+```python
+a_dict["some key"] = "new_value"
+```
+
+#example
+
+```python
+a = { "age" : "23","name" : "Something" }
+print(a['name'])
+print(a["age"])
+a["college"] = "GCEK"
+print(a)
+```
+
+- Replacing Values
+
+```python
+a["college"] = "GCEK"
+print(a)
+a["college"] = "CET"
+print(a)
+```
+
+##### Set
+
+- uses only elements seperated by ","
+  #example
+
+```python
+fruits = {"fruit_1","fruit_2","fruit_3"}
+```
+
+```python
+a = { "age" : "23","name" : "Something" }
+print(a['name'])
+print(a["age"])
+a["college"] = "GCEK"
+print(a)
+a["college"] = "CET"
+print(a)
+# Prints None if the value is not exist
+print(a.get("marks",None)) # .get is the replacement for has_key
+print(a.get("marks",True))
+print(a.get("marks",False))
+print(a.get("name",False))
+##### Alternative to get
+try:
+	print(a["marks"])
+except:
+	 print(None)
+
+# .pop method is used to remove
+a.pop("name")
+print(a)
+a.pop("name",None)
+
+# len(a) return the length of entries
+print(len(a))
+
+############## SET ###########
+fruits = {'apple','orenge'}
+
+print("apple" in fruits)
+print(fruits)
+## pop in set
+# It remove the last index item
+fruits.pop()
+print(fruits)
+```
+
+### Module 3
+
+#### 2024-09-27
+
+Key: `Class` , `Objects` , `OOP` , `Polymorphism `
+
+Polymorphism:
+
+````python
+class Person:
+  def __init(self,fname,lname):
+    # __init__ is a constructor it runs automatically when a object is created.
+    self.firstname = fname
+    self.lastname = lname
+
+  # Functions are __init__ and printname()
+  # firstname and lastname are the variables inside the function
+  def printname(self):
+    print(self.firstname,self.lastname)
+
+  def printlength(self):
+      print(len(self.firstname), len(self.lastname))
+
+  def get_age(self, age1, age2):
+      self.age1 = age1
+      self.age2 = age2
+
+  def print_age(self):
+      print(f"John Age is {self.age1} Doe age is {self.age2}")
+
+
+# How to create Object
+x = Person("John","Doe")
+# Here x is the object and when the object is created the __init__ is execited
+# self is the reference of x
+x.printname()
+
+x.get_age(22, 22)
+x.print_age()
+```
+
+##### Child Class
+```python
+# class new_child_class(parent_class):
+class Student(Person):
+  pass
+```
 ## References
 
 1. [[python]]
+````

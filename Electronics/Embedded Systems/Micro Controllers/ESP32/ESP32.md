@@ -9,16 +9,17 @@ cssclasses:
 
 # ESP32
 
-- [Introduction](#Introduction)
+- [Introduction](#introduction)
 - [Programming](#programming)
-  - [WiFi Programming](./programming/WiFi Programming.md)
-  - [interfacing]
-  - [multitasking]
-  - [ESP-NOW]
-  - [Interrupt Programming]
-  - [ESP32 Web Programming|Web Programming]
+  - [ESP IDF](./ESP_IDF.md)
+  - [WiFi Programming](./programming/WiFi%20Programming.md)
+  - [Interfacing](./programming/Interfacing.md)
+  - [Multitasking](./programming/MultiTasking.md)
+  - [ESP-NOW](./ESP-NOW.md)
+  - [Interrupt Programming](./programming/Interrupt%20Programming.md)
+  - [ESP32 Web Programming|Web Programming](./programming/Web%20Programming.md)
 
-#Introduction
+# Introduction
 
 ![](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-Pinout.png)
 
@@ -47,8 +48,10 @@ cssclasses:
 
 ## Programming
 
-- [[WiFi Programming]]
-- [[Interfacing]]
-- [[MultiTasking]]
-- [[Web Programming]]
-- [[ESP-NOW]]
+- [ESP IDF](./ESP_IDF.md)
+- [WiFi Programming](./programming/WiFi%20Programming.md)
+- [Interfacing](./programming/Interfacing.md)
+- [Multitasking](./programming/MultiTasking.md)
+- [ESP-NOW](./ESP-NOW.md)
+- [Interrupt Programming](./programming/Interrupt%20Programming.md)
+- [ESP32 Web Programming|Web Programming](./programming/Web%20Programming.md)

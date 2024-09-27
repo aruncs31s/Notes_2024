@@ -35,3 +35,16 @@ arduino-cli core install esp32:esp32
 arduino_cli compile --fqbn esp32:esp32:esp32 /path/to/sketch/folder --log
 arduino_cli upload -p port --fqbn esp32:esp32:esp32 /path/to/sketch/folder --log
 ```
+
+#### Esp8266 Setup
+
+1.
+
+```bash
+arduino-cli  core update-index --additional-urls https://arduino.esp8266.com/stable/package_esp8266com_index.json
+
+arduino-cli core install esp8266:esp8266 --config-file ./.cli-config.yml
+arduino-cli compile --fqbn esp8266:esp8266:nodemcuv2
+arduino-cli board listall |findstr esp8266
+arduino-cli upload --fqbn esp8266:esp8266:generic -p /dev/ttyUSB0 --log
+```
