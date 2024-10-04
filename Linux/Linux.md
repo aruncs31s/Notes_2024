@@ -11,6 +11,7 @@ tags: []
 - [[Obsidian]]
 - [[Fixes]]
 - [[Needs to remove]]
+- [[Communication Tools]]
 
 - [BooksMarks](#bookmarks)
   https://ieee-iv.org/2024/f1tenth-championship/

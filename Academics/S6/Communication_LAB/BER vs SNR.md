@@ -7,9 +7,7 @@
 **Formula:** 
 
 $$
-
 SNR (linear)=\frac{Psignal}{Pnoise} {SNR (linear)} = \frac{P_{\text{signal}}}{P_{\text{noise}}}SNR (linear)=Pnoise​Psignal​​ SNR (dB)=10log⁡10(PsignalPnoise)\text{SNR (dB)} = 10 \log_{10} \left( \frac{P_{\text{signal}}}{P_{\text{noise}}} \right)SNR (dB)=10log10​(Pnoise​Psignal​​)
-
 $$
 where:
 

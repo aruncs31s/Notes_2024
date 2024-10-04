@@ -619,9 +619,9 @@ Key: `Class` , `Objects` , `OOP` , `Polymorphism `
 
 Polymorphism:
 
-````python
+```python
 class Person:
-  def __init(self,fname,lname):
+  def __init__(self,fname,lname):
     # __init__ is a constructor it runs automatically when a object is created.
     self.firstname = fname
     self.lastname = lname
@@ -653,12 +653,117 @@ x.print_age()
 ```
 
 ##### Child Class
+
 ```python
 # class new_child_class(parent_class):
 class Student(Person):
   pass
 ```
+
+#### 2024-10-03
+
+- `super().init` ->
+
+```python
+"""Create a Person Class and create child class named Student and add graduation year for Parent class and create a clid class ??? """
+
+
+class Person:
+    def __init__(self, fname, lname):
+        self.firstname = fname
+        self.lastname = lname
+
+    def printname(self):
+        print(self.firstname, self.lastname)
+
+
+Nivin = Person("Nivin", "Ravichandran")
+# Nivin.printname()
+
+
+class Student(Person):
+    def __init__(self, fname, lname, year):
+        super().__init__(fname, lname)
+        self.graduationyear = year
+
+    def printname(self):
+        print(self.firstname, self.lastname, self.graduationyear)
+
+
+Nivin_New = Student("Nivin", "Ravichandran", 2022)
+
+# Nivin_New.printname()
+
+print(Nivin_New.lastname)
+
+
+class New_Gen_Z(Student):
+    def __init__(self, fname, lname, year, age):
+        super().__init__(fname, lname, year)
+        self.age = age
+
+    def printname(self):
+        print(self.firstname, self.lastname, self.graduationyear, self.age)
+
+
+Manual_New = New_Gen_Z("Manu", "Old", 2022, 22)
+
+Manual_New.printname()
+```
+
+##### Types of Inheritance
+
+- Mainly 4 types of Inheritance
+
+1. Single Inheritance
+
+```mermaid
+graph TB
+A --> B
+C --> B
+```
+
+2. Multiple Inheritance
+
+```mermaid
+graph TB
+A --> B
+A --> C
+A --> D
+```
+
+3. Hybrid Inheritance
+
+```mermaid
+graph TB
+A --> B
+A --> C
+C --> D
+C--> E
+```
+
+##### Questions
+
+```python
+"""Create a class Student with atributes name and roll no. and a method dataprint() for displauing the same. Create two instance of the class and call the method for each instance of the class"""
+
+
+class Student:
+    def __init__(self, name, rollno):
+        self.name = name
+        self.roll_number = rollno
+
+    def dataprint(self):
+        print(f"Name  : {self.name} Roll No : {self.roll_number}")
+
+
+n = Student("neh", 35)
+meg = Student("meg", 32)
+
+n.dataprint()
+meg.dataprint()
+```
+
 ## References
 
 1. [[python]]
-````

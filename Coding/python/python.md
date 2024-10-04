@@ -11,7 +11,7 @@ tags: []
 - [Numpy](numpy.md)
 - [matplotlib](./matplotlib.md)
 - [[Pyaudio]]
-
+- [[Python Regex]]
 ## Contents
 
 - [ ]

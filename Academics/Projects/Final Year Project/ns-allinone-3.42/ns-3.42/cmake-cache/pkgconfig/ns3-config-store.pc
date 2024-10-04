@@ -1,0 +1,13 @@
+exec_prefix="/usr/local/bin"
+libdir="/usr/local/lib"
+includedir="/usr/local/include"
+
+Name: ns3-config-store
+Description: 
+URL: 
+Version: 3.42
+Requires:  ns3-core
+Requires.private: 
+Cflags: -I"${includedir}"  -I/usr/include -I/usr -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/gtk-3.0 -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/atk-1.0 -I/usr/include/libxml2
+Libs: -L"${libdir}" -lns3.42-config-store-default  -lns3.42-core-default /usr/lib/libxml2.so /usr/lib/libfreetype.so /usr/lib/libglib-2.0.so /usr/lib/libgthread-2.0.so /usr/lib/libgobject-2.0.so /usr/lib/libgio-2.0.so /usr/lib/libgdk_pixbuf-2.0.so /usr/lib/libgdk-3.so /usr/lib/libgtk-3.so /usr/lib/libcairo.so /usr/lib/libpango-1.0.so /usr/lib/libatk-1.0.so
+Libs.private: -L"${libdir}" 

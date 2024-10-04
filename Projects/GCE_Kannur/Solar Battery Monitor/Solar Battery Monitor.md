@@ -7,6 +7,7 @@ tags:
   - "#btech"
 ---
 # Solar Battery Monitor
+- [[Solar Battery Monitor Programming]]
 >[!blank|right-medium]
 >![[solar battery monitor.excalidraw]]
 
@@ -44,3 +45,9 @@ Also note that
 3. ESP-12F Module: To test the low cost esp-12 f module.
 4. esp8266 Burner: To burn the code into the esp8266.
 5. Analog Mux: To measure the voltage and current.
+
+
+#### Relay Interfacing 
+This relay will be used to control the LED 
+
+- 

@@ -9,7 +9,7 @@ tags: []
 It translates digital packets into analog packets, by varying the phase and the Amplitude of radio waves.
 
 - It improves spectral efficiency by incorporating more bits into data transmition
-- Used in [[WiFi6|Wifi7]](IEE 802.11be)
+- Used in [[Communication/Wireless Communication/WiFi/WiFi6|Wifi7]](IEE 802.11be)
 
 $$
 \text{Bits Per Symbol} = \log_2{\text{constellation points}}
