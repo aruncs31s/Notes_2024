@@ -780,57 +780,6 @@ meg.dataprint()
 int(a) + int(b) = int
 ```
 
-#### Abstract Class
-
-_if a class contains abstract method then it is called as abstract class_
-
-#### Concrete Class
-
-_If there is no abstract method then it is called as concrete class_
-
-#### Exception
-
-- [[#Type error Exception]]
-- [[#Name error Exception]]
-- [[#Exception Handling]]
-
-##### Type error Exception
-
-_Type error occurs when the type of the variable is not correct_
-
-##### Name error Exception
-
-_Name error occurs when the variable is not defined_
-
-##### Exception Handling
-
-#example
-
-```python
-try:
-    <Statement>
-except <exception type>:
-    <Statement>
-```
-
-#anotherExample
-
-```python
-try:
-    something
-
-except Exception as e:
-    print(f"Error {e}")
-```
-
-###### Multiple Exception Handling
-
-```python
-except (TypeError,ValueError,RuntimError) :
-```
-
-Q: Calculate integer error?
-
 ## References
 
 1. [[python]]

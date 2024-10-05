@@ -288,3 +288,11 @@ bind-key -n M-y copy-mode
 bind-key -n M-z resize-pane -Z
 
 ```
+
+#### Frequently Used
+
+1. Change current working dir
+
+```bash
+:attach-session -t . -c new_working_dir
+```
