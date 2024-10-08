@@ -18,7 +18,7 @@ Target Date: ""
 >- [[#Pins Used]]
 ## Modules
 - [[Weather Data Scraper]]
-[[Solar Battery Monitor]]
+- [[Solar Battery Monitor]]
 
 **Initial Plans**:
 1. [x] Measure the Environmental conditions ✅ 2024-09-14
@@ -43,6 +43,9 @@ Target Date: ""
 
 ---
 #### Rain Volume  Measurement 
+
+^c08e06
+
 >[!blank|right-small] Rain Gauge 
 >![[tipping bucket.png]]
 
@@ -177,4 +180,5 @@ Name: 7semi SHT40 Humidity and Temperature Sensor Probe I2C
 | Wind Direction   | GPIO/ADC       | 32         |
 | Rain Fall        | Interrupt      | 35         |
 | Batter Monitor   | ADC 1          | 36         |
+| SHT40            | {VEML7700}     | SDA        |
 

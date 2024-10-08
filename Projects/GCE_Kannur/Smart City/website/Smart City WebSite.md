@@ -51,11 +51,11 @@ db.create_all()
 ###### Storing Data
 
 #### Using Json as Database
+
 - [ ] Check if it can store in high\* order ?
+
 ```mermaid
 graph LR
 A[Json File] --> B[Year] --> BB[Month] --> BBB[Days] --> BBBB(Individual Data)
 A --> C[Year 2] --> CC[Month] --> CCC[Days] --> CCCC(Individual Data)
 ```
-
-

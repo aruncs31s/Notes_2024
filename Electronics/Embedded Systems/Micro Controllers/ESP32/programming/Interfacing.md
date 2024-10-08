@@ -190,13 +190,19 @@ void loop() {
 ---
 
 #### VEML7700 Light Sensor
+>[!blank|right-small]
+>![[Pasted image 20241006204642.png]]
+
 
 - Connect Sensor's VCC to 3.3
 - Connect GND
 - Connect Sensor's SDA to ESP32's SDA
 - Connect Sensor's SCL to ESP32's SCL
-  #exampleCode
 
+**Dimensions**
+- 16.6mm x 16.5mm x 4.0mm
+
+#exampleCode
 ```c
 #include <Wire.h>
 #include "DFRobot_VEML7700.h"

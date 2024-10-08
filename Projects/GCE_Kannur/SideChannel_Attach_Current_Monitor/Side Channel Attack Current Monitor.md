@@ -13,20 +13,21 @@ tags: []
 ### Nexys A7
 
 **To power fro USB**: Set jumper `JP3` to `USB`
-- Out of the box the demo draws ~400ma 
-#### Powering the Board 
-- External power supply can be used by pluggin into the power jack **(J13)** and setting jumper to `JP3` to **WALL** 
-> [!Important] Connection Type
-> The supply must be coax , **center-positive**
-> - 2.1mm internal diameter 
-> - atleast 1A current (5v , 1A = 5W)
+
+- Out of the box the demo draws ~400ma
+
+#### Powering the Board
+
+- External power supply can be used by pluggin into the power jack **(J13)** and setting jumper to `JP3` to **WALL**
+  > [!Important] Connection Type
+  > The supply must be coax , **center-positive**
+  >
+  > - 2.1mm internal diameter
+  > - atleast 1A current (5v , 1A = 5W)
 
 #### Powering the board using battery Pack
 
 ![](./attachments/nexysA7pdf.png)
-
-
-
 
 #### Components Suggestion
 
@@ -51,3 +52,11 @@ tags: []
 ###### Voltage Devider
 
 - Selecting 1k$\ohm$ ohm with series `5v`
+
+
+### Using Shunt Resistor 
+![](./attachments/kicad1.png)
+- In this sketch we can adjust the `Ri` and `Rs`(Rf) to get a good measure of the voltage drop across the shunt resistor 
+- Can use shunt resistor as small as 1kohm 
+- Need to use a voltage divider or use 3.3 V for the power supply for the opamp if it works on 3.3V
+
