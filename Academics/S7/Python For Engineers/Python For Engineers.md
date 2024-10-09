@@ -831,10 +831,88 @@ except (TypeError,ValueError,RuntimError) :
 
 Q: Calculate integer error?
 
+### 2024-10-08
+
+#### Matplotlib and numpy
+
+[[matplotlib]]
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.plot([1,2,3,2,3,4,3,4,5,1])
+plt.show()
+
+```
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# plt.plot -> marker reference , line reference , color reference
+
+
+def plot():
+    plt.plot([1, 2, 3, 2, 3, 4, 3, 4, 5, 1])  # it will consider it as y
+    plt.show()
+
+
+def plot_x_n_y():
+    xpoints = np.array([0, 6])
+    ypoints = np.array([0, 250])
+    plt.plot(xpoints, ypoints)
+
+    plt.show()
+
+
+def plot_without_line():
+    xpoints = np.array([0, 6])
+    ypoints = np.array([0, 250])
+    plt.plot(xpoints, ypoints, ".")
+    plt.show()
+
+
+def multple_plots():
+    xpoints = np.array([1, 8])
+    ypoints = np.array([3, 10])
+    plt.plot(xpoints, ypoints)
+    xpoints = np.array([1, 2, 6, 8])
+    ypoints = np.array([3, 8, 1, 10])
+    plt.plot(xpoints, ypoints)
+    plt.show()
+
+
+# Mark Points with circle
+def mark_with_circle():
+    ypoints = np.array([3, 8, 1, 10])
+    plt.plot(ypoints, marker="*")
+    plt.show()
+
+
+def color_change():
+    ypoints = np.array([3, 8, 1, 10])
+    plt.plot(ypoints, "o-.r")  # dot , red color ,circle
+    ypoints = np.array([2, 9, 2, 9])
+    # plt.plot(ypoints, marker="o")
+    plt.show()
+
+
+def with_marker_size():
+    ypoints = np.array([3, 8, 1, 10])
+    plt.plot(ypoints, "o-.r", ms=20)  # ms -> marker size
+    plt.show()
+
+
+def with_marker_edge_color():
+    ypoints = np.array([3, 8, 1, 10])
+    plt.plot(
+        ypoints, "o-.r", ms=20, mec="r", mfc="g"
+    )  # ms -> marker size , mfc ? and mec ?
+    plt.show()
+
+```
+
 ## References
 
 1. [[python]]
-
-```
-
-```

@@ -21,7 +21,7 @@ prerequisites are the things that need before hand. That is you should know all 
 **Softwares**:
 1. [IIO Oscilloscope](https://wiki.analog.com/resources/tools-software/linux-software/iio_oscilloscope)
 2. [[Matlab Simulink]]
-3. [[GNU Radio]]
+3. [[Communication/SDR/GNU Radio]]
 
 
 ### Pluto Gain Contorl 

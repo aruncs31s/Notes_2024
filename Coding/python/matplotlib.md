@@ -1,6 +1,25 @@
+---
+id: matlibplot
+aliases: []
+tags: []
+---
+
 # Matlibplot
 
+- [[#Basics]]
+
+## Basics
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.plot([1, 2, 3, 2,4,3,4,5,1])
+plt.show()
+```
+
 #### Ploting a Sine wave
+
 ```python
 
 import matplotlib.pyplot as plt
@@ -17,7 +36,6 @@ plt.plot(x, np.sin((3.14/2 )- x), color="red")
 
 plt.show()
 ```
-
 
 ```python
 import matplotlib.pyplot as plt
