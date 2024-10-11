@@ -11,5 +11,9 @@ cssclasses:
 
 # C++
 
-- [[Basics 1|Basics]]
+- [[Basics|Basics]]
   - [[Introduction]]
+- [[Functions]]
+- [[structs]]
+- [[unions]]
+- [[Classes]]

@@ -21,11 +21,14 @@ sudo pacman -S arduino-cli
 
 ```bash
 arduino-cli  --additional-urls https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+
+arduino-cli config add board_manager.additional_urls https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
 ```
 
 3. Install ESP32 Board
 
 ```bash
+arduino-cli core update-index
 arduino-cli core install esp32:esp32
 ```
 

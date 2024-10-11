@@ -12,6 +12,7 @@ cssclasses:
 - [Introduction](#introduction)
 - [Programming](#programming)
   - [ESP IDF](./ESP_IDF.md)
+  - [ADC](./ESP-ADC.md)
   - [WiFi Programming](./programming/WiFi%20Programming.md)
   - [Interfacing](./programming/Interfacing.md)
   - [Multitasking](./programming/MultiTasking.md)

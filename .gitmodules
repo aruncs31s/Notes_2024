@@ -1,0 +1,25 @@
+---
+id: daily notes
+tags:
+  - "#daily_notes"
+Created: "2024-10-11"
+---
+# 11-10-2024
+
+
+## Tasks
+```todoist  
+name: "Today"
+filter: "2024-10-11"  
+autorefresh: 120
+```
+---
+```todoist  
+name: "Overdue "
+filter: "overdue"  
+autorefresh: 120
+sorting:
+- priority
+```
+
+

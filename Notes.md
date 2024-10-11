@@ -28,3 +28,15 @@ cssclasses:
 - [[Academics/Btech|Btech]]
 - [[Daily Notes|📓 Daily Notes]]
 - [[Linux|💻 Linux]]
+
+## Note Taking Methods
+
+1. Zattelkasten Methods
+
+### Zattelkasten Method
+
+#advantages
+
+- Systematically organize important information
+- Find information again, even years later
+- Develop your own ideas
